@@ -1,12 +1,13 @@
 "use client";
-import Grainient from "@/Grainient";
 import Navbar from "@/app/components/Navbar";
 import Hero from "@/app/components/Hero";
 import Manifesto from "@/app/components/Manifesto";
+import SectionDivider from "@/app/components/SectionDivider";
 import Labs from "@/app/components/Labs";
 import Showcase from "@/app/components/Showcase";
 import Founders from "@/app/components/Founders";
 import Footer from "@/app/components/Footer";
+import Grainient from "../Grainient"; 
 
 export default function Home() {
   return (
@@ -17,12 +18,32 @@ export default function Home() {
 
       <div className="relative z-10">
         <Navbar />
-        <Hero />
-        <Manifesto />
-        <Labs />
-        <Showcase />
-        <Founders />
-        <Footer /> 
+        
+        <section id="hero">
+          <Hero />
+        </section>
+
+        <SectionDivider />
+
+        <section id="manifesto">
+          <Manifesto />
+        </section>
+
+        <section id="labs">
+          <Labs />
+        </section>
+
+        <section id="showcase">
+          <Showcase />
+        </section>
+
+        <SectionDivider />
+
+        <section id="founders">
+          <Founders />
+        </section>
+
+        <Footer />
       </div>
     </main>
   );
