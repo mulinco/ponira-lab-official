@@ -5,24 +5,24 @@ import Grainient from "../../Grainient";
 export default function SectionDivider() {
   const wavePath = "M0,192L48,176C96,160,192,128,288,138.7C384,149,480,203,576,229.3C672,256,768,256,864,218.7C960,181,1056,107,1152,106.7C1248,107,1344,181,1392,218.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z";
 
-  const sweepVariants: Variants = {
-    initial: { x: "-100%" },
-    animate: {
-      x: "100%",
-      transition: {
-        duration: 4,
-        repeat: Infinity,
-        ease: "linear",
-        repeatDelay: 1
-      }
+const sweepVariants: Variants = {
+  initial: { 
+    x: "-100%" // Começa totalmente escondido à esquerda
+  },
+  animate: {
+    x: "300%", // Como ele tem w-1/3, ele precisa de 300% para atravessar o pai todo
+    transition: {
+      repeat: Infinity,
+      duration: 3,     // Ajuste a velocidade aqui (maior = mais lento)
+      ease: "linear",   // Agora o TS aceita porque o objeto está tipado como Variants
+      repeatDelay: 1    // Pausa elegante entre uma varredura e outra
     }
-  };
+  }
+};
 
   return (
-    // Adicionei um padding vertical e a máscara de transparência VERTICAL nas pontas
     <div className="w-full overflow-hidden leading-[0] relative py-8"
          style={{ 
-           // MUDANÇA AQUI: de 'to right' para 'to bottom'
            maskImage: 'linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)',
            WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)'
          }}>
@@ -42,7 +42,7 @@ export default function SectionDivider() {
           className="w-full h-full relative overflow-hidden scale-[1.01]"
           style={{ 
             clipPath: "url(#waveClip)",
-            filter: "blur(0.8px)" // Reduzi levemente o blur para não perder a forma
+            filter: "blur(0.8px)" 
           }}
         >
           {/* Fundo Base (Amber Burnt) */}
@@ -50,20 +50,20 @@ export default function SectionDivider() {
           
           {/* Textura Grainient */}
           <div className="absolute inset-0 opacity-40 mix-blend-overlay">
-            <Grainient color1="#FFD700" color2="#C68D07" color3="#FF8C00" />
+            <Grainient color1="#362e01" color2="#362600" color3="#4d2b02" />
           </div>
 
           {/* Efeito de Varredura */}
-          <motion.div 
-            variants={sweepVariants}
-            initial="initial"
-            animate="animate"
-            className="absolute inset-0 w-1/3 h-full z-20"
-            style={{
-              background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)",
-              skewX: "-20deg"
-            }}
-          />
+          <motion.div 
+            variants={sweepVariants}
+            initial="initial"
+            animate="animate"
+            className="absolute inset-0 w-1/3 h-full z-20"
+            style={{
+              background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)",
+              skewX: "-20deg"
+            }}
+          />
         </div>
 
         {/* Aura externa pulsante suave */}

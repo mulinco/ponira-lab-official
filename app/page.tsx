@@ -2,12 +2,12 @@
 import Navbar from "@/app/components/Navbar";
 import Hero from "@/app/components/Hero";
 import Manifesto from "@/app/components/Manifesto";
-import SectionDivider from "@/app/components/SectionDivider";
 import Labs from "@/app/components/Labs";
 import Showcase from "@/app/components/Showcase";
 import Founders from "@/app/components/Founders";
 import Footer from "@/app/components/Footer";
 import Grainient from "../Grainient"; 
+import RevealSection from "./components/RevealSection";
 
 export default function Home() {
   return (
@@ -18,30 +18,24 @@ export default function Home() {
 
       <div className="relative z-10">
         <Navbar />
-        
-        <section id="hero">
-          <Hero />
-        </section>
+  
+        <Hero />
 
-        <SectionDivider />
-
-        <section id="manifesto">
+        <RevealSection>
           <Manifesto />
-        </section>
+        </RevealSection>
 
-        <section id="labs">
+        <RevealSection>
           <Labs />
-        </section>
+        </RevealSection>
 
-        <section id="showcase">
+        <RevealSection>
           <Showcase />
-        </section>
+        </RevealSection>
 
-        <SectionDivider />
-
-        <section id="founders">
+        <RevealSection>
           <Founders />
-        </section>
+        </RevealSection>
 
         <Footer />
       </div>
