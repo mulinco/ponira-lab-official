@@ -9,7 +9,6 @@ const links = [
     title: "Instagram",
     description: "Onde o propósito ganha forma. Portfólio visual e essência estética.",
     url: "https://instagram.com/poniralab",
-    // Bronze Vibrante (Spectrum: #CD7F32)
     bg: "bg-[#CD7F32]/20",
     border: "border-[#CD7F32]/60",
     text: "text-[#CD7F32]"
@@ -20,7 +19,6 @@ const links = [
     title: "TikTok",
     description: "Insights rápidos e o movimento constante do laboratório.",
     url: "https://tiktok.com/@poniralab",
-    // Moss Elétrico (Spectrum: #A3B18A -> #606C38 vivo)
     bg: "bg-[#82933d]/20",
     border: "border-[#82933d]/60",
     text: "text-[#82933d]"
@@ -31,7 +29,6 @@ const links = [
     title: "LinkedIn",
     description: "Engenharia de software e o back-end que sustenta a autoridade.",
     url: "https://linkedin.com/company/poniralab",
-    // Ouro Solar (Spectrum: #FFB703)
     bg: "bg-[#FFB703]/15",
     border: "border-[#FFB703]/60",
     text: "text-[#FFB703]"
@@ -62,15 +59,19 @@ export default function Linktree() {
   return (
     <main className="relative min-h-screen bg-ponira-brown overflow-x-hidden">
       <div className="fixed inset-0 z-0">
-        <Grainient />
+        <Grainient
+          color1="#5a5539"
+          color2="#3b2e0f"
+          color3="#9b682a"
+        />
       </div>
 
       <div className="relative z-10 px-6 py-12 flex flex-col items-center">
         <header className="flex flex-col items-center mb-12 text-center">
-          <motion.img 
+          <motion.img
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            src="/logo-icon.svg" 
+            src="/logo-icon.svg"
             className="w-16 h-16 mb-6 opacity-90 drop-shadow-2xl"
           />
           <h1 className="text-3xl text-white font-display italic mb-2">Ponira Lab</h1>

@@ -6,39 +6,51 @@ import Labs from "@/app/components/Labs";
 import Showcase from "@/app/components/Showcase";
 import Founders from "@/app/components/Founders";
 import Footer from "@/app/components/Footer";
-import Grainient from "../Grainient"; 
-import RevealSection from "./components/RevealSection";
+import Grainient from "../Grainient";
+import SectionReveal from "./components/Sectionreveal";
+import ViewportBlur from "./components/ViewportBlur";
 
 export default function Home() {
   return (
     <main className="relative min-h-screen bg-ponira-brown overflow-x-hidden">
+
+      {/* Fundo animado */}
       <div className="fixed inset-0 z-0">
-        <Grainient />
+        <Grainient
+          color1="#5a5539"
+          color2="#3b2e0f"
+          color3="#9b682a"
+        />
       </div>
+
+      {/* Blur periférico da base */}
+      <ViewportBlur />
 
       <div className="relative z-10">
         <Navbar />
-  
+
+        {/* Hero tem lógica própria de saída — não envolve */}
         <Hero />
 
-        <RevealSection>
+        <SectionReveal>
           <Manifesto />
-        </RevealSection>
+        </SectionReveal>
 
-        <RevealSection>
+        <SectionReveal>
           <Labs />
-        </RevealSection>
+        </SectionReveal>
 
-        <RevealSection>
+        <SectionReveal exitAt={0.92}>
           <Showcase />
-        </RevealSection>
+        </SectionReveal>
 
-        <RevealSection>
+        <SectionReveal exitAt={0.88}>
           <Founders />
-        </RevealSection>
+        </SectionReveal>
 
         <Footer />
       </div>
+
     </main>
   );
 }

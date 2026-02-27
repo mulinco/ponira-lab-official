@@ -6,33 +6,28 @@ import { useRef } from "react";
 export default function Hero() {
   const targetRef = useRef<HTMLDivElement>(null);
 
-  // Captura o progresso do scroll especificamente para esta seção
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start start", "end start"],
   });
 
-  // Mapeia o scroll para os valores de CSS
-  // Conforme desce (0 para 1), o blur aumenta e a opacidade diminui
   const blurValue = useTransform(scrollYProgress, [0, 0.8], ["blur(0px)", "blur(15px)"]);
   const opacityValue = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const yValue = useTransform(scrollYProgress, [0, 1], ["0px", "100px"]);
 
   return (
-    <section 
-      ref={targetRef} 
+    <section
+      ref={targetRef}
       className="relative flex flex-col items-center justify-center min-h-screen px-4 text-center overflow-hidden"
     >
-      {/* O motion.div aplica as transformações ao conteúdo interno */}
-      <motion.div 
+      <motion.div
         style={{ filter: blurValue, opacity: opacityValue, y: yValue }}
         className="max-w-6xl mx-auto w-full flex flex-col items-center"
       >
-        
         <div className="mb-[-1rem] md:mb-[-2.5rem] z-20">
-          <img 
-            src="/logo-icon.svg" 
-            alt="Ponira Icon" 
+          <img
+            src="/logo-icon.svg"
+            alt="Ponira Icon"
             className="w-12 h-12 md:w-24 md:h-24 opacity-90"
           />
         </div>
@@ -48,12 +43,18 @@ export default function Hero() {
 
         <p className="text-lg md:text-2xl text-ponira-white/80 mt-12 mb-14 max-w-2xl font-body font-light leading-relaxed">
           Onde a sensibilidade do design encontra a precisão da tecnologia.
-          Sistemas que <span className="text-ponira-yellow font-semibold">automatizam sua autoridade.</span>
+          Sistemas que{" "}
+          <span className="text-ponira-yellow font-semibold">
+            automatizam sua autoridade.
+          </span>
         </p>
 
-        <button className="px-12 py-5 bg-ponira-yellow text-white rounded-full font-body text-sm hover:scale-105 transition shadow-2xl uppercase tracking-widest">
+        <a
+          href="mailto:contato@poniralab.com"
+          className="px-12 py-5 bg-ponira-yellow text-white rounded-full font-body text-sm hover:scale-105 transition shadow-2xl uppercase tracking-widest"
+        >
           Iniciar Conexão
-        </button>
+        </a>
       </motion.div>
     </section>
   );
