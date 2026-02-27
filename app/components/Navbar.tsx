@@ -3,10 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 const navLinks = [
-  { name: "Manifesto", href: "#manifesto" },
-  { name: "Labs", href: "#labs" },
-  { name: "Artefatos", href: "#showcase" },
-  { name: "Sócias", href: "#founders" },
+  { name: "Manifesto", href: "/#manifesto" },
+  { name: "Labs", href: "/#labs" },
+  { name: "Artefatos", href: "/#showcase" },
+  { name: "Cases", href: "/cases" },
+  { name: "Sócias", href: "/#founders" },
 ];
 
 export default function Navbar() {
