@@ -50,7 +50,7 @@ export default function Hero() {
         </p>
 
         <a
-          href="mailto:contato@poniralab.com"
+          href="/contato"
           className="px-12 py-5 bg-ponira-yellow text-white rounded-full font-body text-sm hover:scale-105 transition shadow-2xl uppercase tracking-widest"
         >
           Iniciar Conexão
