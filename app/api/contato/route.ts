@@ -1,14 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-// Email que recebe os contatos
 const TO_EMAIL = "contato@poniralab.com";
-// Email remetente — precisa ser do domínio verificado no Resend
 const FROM_EMAIL = "Ponira Lab <contato@poniralab.com>";
 
 export async function POST(req: NextRequest) {
+  // Instancia dentro do handler para garantir que a env var existe em runtime
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   try {
     const body = await req.json();
     const { nome, email, whatsapp, tipoProjeto, orcamento } = body;
