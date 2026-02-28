@@ -183,6 +183,8 @@ export const cases: CaseStudy[] = [
   },
 
   // ─── SYSTEMS ──────────────────────────────────────────────────────────────
+  // cover aponta para /public/covers/<slug>.png
+  // Gere os arquivos rodando: node scripts/generate-covers.mjs
 
   {
     slug: "colegio-joao-pedro-website",
@@ -191,8 +193,8 @@ export const cases: CaseStudy[] = [
     subtitle: "Da identidade visual ao site — as duas sócias, um cliente.",
     category: "Website Institucional & Colaboração",
     year: "2025",
-    cover: null,
-    images: [],
+    cover: "/covers/colegio-joao-pedro-website.png",
+    images: ["/covers/colegio-joao-pedro-website.png"],
     context:
       "O Colégio João Pedro é o projeto que mais representa o que a Ponira é: a Carol criou a identidade visual completa da escola, e a Maria usou esse sistema como base para construir o site institucional. Dois produtos distintos, uma única linguagem, criados pelas duas frentes da agência para o mesmo cliente.",
     process:
@@ -212,8 +214,8 @@ export const cases: CaseStudy[] = [
     subtitle: "Dados que revelam padrões invisíveis.",
     category: "Dashboard & Data Analytics",
     year: "2024",
-    cover: null,
-    images: [],
+    cover: "/covers/netflix-genre-analysis.png",
+    images: ["/covers/netflix-genre-analysis.png"],
     context:
       "O catálogo da Netflix tem milhares de títulos com dezenas de variáveis. A pergunta era simples: o que os dados revelam sobre o que as pessoas consomem, por onde e quando? O desafio era transformar um dataset bruto em inteligência visual e acionável.",
     process:
@@ -233,8 +235,8 @@ export const cases: CaseStudy[] = [
     subtitle: "Automação que elimina trabalho repetitivo.",
     category: "Automação & Processamento",
     year: "2024",
-    cover: null,
-    images: [],
+    cover: "/covers/extrator-pdf-aero.png",
+    images: ["/covers/extrator-pdf-aero.png"],
     context:
       "Documentos aeronáuticos em PDF são densos, padronizados e massivos. Extrair dados específicos manualmente é um trabalho que consome horas por semana — e que pede precisão absoluta, já que erros em dados aeronáuticos têm consequências reais.",
     process:
@@ -330,8 +332,8 @@ export const cases: CaseStudy[] = [
     subtitle: "A identidade da Carol, do Illustrator para o código.",
     category: "Desenvolvimento & Identidade Digital",
     year: "2025",
-    cover: null,
-    images: [],
+    cover: "/covers/linktree-carol.png",
+    images: ["/covers/linktree-carol.png"],
     context:
       "A Carol já tinha uma identidade visual sólida — construída por ela mesma, com intenção e história. O desafio era pegar esse sistema visual nascido no Illustrator e traduzi-lo fielmente para uma experiência digital interativa. Não um linktree genérico: um produto com a cara dela.",
     process:
@@ -351,8 +353,8 @@ export const cases: CaseStudy[] = [
     subtitle: "Design e código feitos pela mesma mão.",
     category: "Desenvolvimento & Design Autoral",
     year: "2025",
-    cover: null,
-    images: [],
+    cover: "/covers/linktree-agatha.png",
+    images: ["/covers/linktree-agatha.png"],
     context:
       "Para a Ágatha, não havia identidade visual preexistente. A Maria partiu do zero — criando o conceito visual, definindo a paleta, escolhendo a tipografia, e desenvolvendo o produto em seguida. Um exercício completo de criação: do conceito ao código, sem intermediários.",
     process:
@@ -372,8 +374,8 @@ export const cases: CaseStudy[] = [
     subtitle: "Pesquisa científica com presença digital.",
     category: "Plataforma Científica",
     year: "2024",
-    cover: null,
-    images: [],
+    cover: "/covers/lbem-ufrj.png",
+    images: ["/covers/lbem-ufrj.png"],
     context:
       "O Laboratório de Bioinformática Evolutiva e Molecular da UFRJ realiza pesquisa de alto nível mas tinha presença digital aquém da qualidade científica produzida. A plataforma precisava comunicar rigor, credibilidade e acessibilidade — para outros pesquisadores e para o público interessado.",
     process:

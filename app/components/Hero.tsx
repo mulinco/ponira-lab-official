@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 export default function Hero() {
   const targetRef = useRef<HTMLDivElement>(null);
@@ -24,37 +25,53 @@ export default function Hero() {
         style={{ filter: blurValue, opacity: opacityValue, y: yValue }}
         className="max-w-6xl mx-auto w-full flex flex-col items-center"
       >
-        <div className="mb-[-1rem] md:mb-[-2.5rem] z-20">
-          <img
-            src="/logo-icon.svg"
-            alt="Ponira Icon"
-            className="w-12 h-12 md:w-24 md:h-24 opacity-90"
+        <motion.div
+          initial={{ opacity: 0, y: 20, scale: 0.96 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-10"
+        >
+          {/*
+            width/height definem as proporções intrínsecas do SVG para o Next.js.
+            O tamanho visual real é controlado pelo Tailwind via className.
+            priority garante que o logo seja carregado como LCP asset.
+          */}
+          <Image
+            src="/logo-full.svg"
+            alt="Ponira Lab"
+            width={540}
+            height={200}
+            priority
+            className="w-64 sm:w-80 md:w-[420px] lg:w-[540px] h-auto"
+            style={{
+              filter:
+                "brightness(0) saturate(100%) invert(60%) sepia(90%) saturate(500%) hue-rotate(5deg) brightness(95%)",
+            }}
           />
-        </div>
+        </motion.div>
 
-        <div className="relative inline-block">
-          <h1 className="text-[3.5rem] sm:text-7xl md:text-9xl lg:text-[11rem] font-display uppercase italic text-ponira-yellow leading-none">
-            PONIRA
-          </h1>
-          <span className="absolute bottom-[-0.5rem] right-[-0.5rem] md:bottom-0 md:right-[-2rem] font-display text-xl sm:text-3xl md:text-6xl text-ponira-white uppercase italic">
-            .LAB
-          </span>
-        </div>
-
-        <p className="text-lg md:text-2xl text-ponira-white/80 mt-12 mb-14 max-w-2xl font-body font-light leading-relaxed">
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.4 }}
+          className="text-lg md:text-2xl text-ponira-white/80 mb-14 max-w-2xl font-body font-light leading-relaxed"
+        >
           Onde a sensibilidade do design encontra a precisão da tecnologia.
           Sistemas que{" "}
           <span className="text-ponira-yellow font-semibold">
             automatizam sua autoridade.
           </span>
-        </p>
+        </motion.p>
 
-        <a
+        <motion.a
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           href="/contato"
           className="px-12 py-5 bg-ponira-yellow text-white rounded-full font-body text-sm hover:scale-105 transition shadow-2xl uppercase tracking-widest"
         >
           Iniciar Conexão
-        </a>
+        </motion.a>
       </motion.div>
     </section>
   );

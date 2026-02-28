@@ -1,6 +1,7 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import Link from "next/link";
 
 const navLinks = [
   { name: "Manifesto", href: "/#manifesto" },
@@ -14,7 +15,6 @@ const navLinks = [
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-
   const handleLinkClick = () => setMobileOpen(false);
 
   return (
@@ -25,21 +25,23 @@ export default function Navbar() {
         transition={{ duration: 1, ease: "easeOut" }}
         className="fixed top-0 left-0 w-full z-50 px-6 py-8 flex justify-between items-center pointer-events-none"
       >
-        {/* Logo */}
+        {/* ── Logo ── */}
         <div className="pointer-events-auto">
-          <a href="#" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-3 group">
+            {/* Ícone — usa logo-icon.svg (palmeira escura) com filtro para clarear sobre fundo escuro */}
             <img
               src="/logo-icon.svg"
-              className="w-5 h-5 opacity-40 group-hover:opacity-100 transition-opacity grayscale"
               alt="Ponira"
+              className="w-6 h-6 opacity-50 group-hover:opacity-100 transition-opacity duration-300"
+              style={{ filter: "brightness(0) invert(1)" }} // inverte para branco sobre fundo escuro
             />
-            <span className="text-ponira-white/20 group-hover:text-ponira-white transition-colors font-body text-[9px] uppercase tracking-[0.4em] font-bold">
+            <span className="text-ponira-white/30 group-hover:text-ponira-white transition-colors font-body text-[9px] uppercase tracking-[0.4em] font-bold">
               Ponira Lab
             </span>
-          </a>
+          </Link>
         </div>
 
-        {/* Desktop links */}
+        {/* ── Desktop links ── */}
         <div className="hidden md:flex gap-10 pointer-events-auto bg-black/5 backdrop-blur-sm border border-ponira-white/5 px-8 py-3 rounded-full">
           {navLinks.map((link) => (
             <a
@@ -52,7 +54,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Desktop status */}
+        {/* ── Status ── */}
         <div className="hidden lg:block pointer-events-auto text-right">
           <span className="text-ponira-white/10 font-body text-[8px] uppercase tracking-widest block">
             Base: Rio de Janeiro, RJ
@@ -62,7 +64,7 @@ export default function Navbar() {
           </span>
         </div>
 
-        {/* Mobile hamburger */}
+        {/* ── Hamburger mobile ── */}
         <button
           onClick={() => setMobileOpen((v) => !v)}
           className="md:hidden pointer-events-auto flex flex-col gap-[5px] p-2 group"
@@ -83,7 +85,7 @@ export default function Navbar() {
         </button>
       </motion.nav>
 
-      {/* Mobile menu overlay */}
+      {/* ── Mobile overlay ── */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -93,6 +95,21 @@ export default function Navbar() {
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-ponira-brown/95 backdrop-blur-lg md:hidden"
           >
+            {/* Logo centralizado no mobile menu */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.1 }}
+              className="mb-12"
+            >
+              <img
+                src="/logo-icon.svg"
+                alt="Ponira"
+                className="w-12 h-12 opacity-20"
+                style={{ filter: "brightness(0) invert(1)" }}
+              />
+            </motion.div>
+
             <nav className="flex flex-col items-center gap-10">
               {navLinks.map((link, i) => (
                 <motion.a
@@ -101,7 +118,7 @@ export default function Navbar() {
                   onClick={handleLinkClick}
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.07 }}
+                  transition={{ delay: i * 0.07 + 0.15 }}
                   className="text-ponira-white/50 hover:text-ponira-yellow transition-colors font-display text-4xl italic uppercase tracking-tight"
                 >
                   {link.name}
@@ -113,7 +130,7 @@ export default function Navbar() {
                 onClick={handleLinkClick}
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: navLinks.length * 0.07 }}
+                transition={{ delay: navLinks.length * 0.07 + 0.15 }}
                 className="mt-6 px-10 py-4 bg-ponira-yellow text-white rounded-full font-body text-xs uppercase tracking-widest hover:scale-105 transition"
               >
                 Iniciar Conexão

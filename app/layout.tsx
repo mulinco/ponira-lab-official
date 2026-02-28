@@ -22,6 +22,23 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Ponira Lab", url: "https://poniralab.com" }],
   creator: "Ponira Lab",
+
+  // ── Ícones ──────────────────────────────────────────────────────────────
+  icons: {
+    // Favicon padrão — use o ícone da palmeira
+    icon: [
+      { url: "/logo-icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    // Ícone para iOS (Apple touch icon) — precisa de fundo, use o badge quadrado
+    apple: [
+      { url: "/logo-badge.svg", sizes: "180x180", type: "image/svg+xml" },
+    ],
+    // Shortcut
+    shortcut: "/logo-icon.svg",
+  },
+
+  // ── Open Graph ───────────────────────────────────────────────────────────
   openGraph: {
     type: "website",
     locale: "pt_BR",
@@ -32,6 +49,9 @@ export const metadata: Metadata = {
       "Agência boutique carioca com três frentes: Studio, Creative e Systems. Corpo, Alma & Sopro.",
     images: [
       {
+        // Crie uma og-image usando o logo-full.svg sobre fundo #2B1B16
+        // Dimensões ideais: 1200×630px
+        // Ferramenta rápida: satori (vercel) ou simplesmente um PNG exportado do Illustrator
         url: "/og-image.png",
         width: 1200,
         height: 630,
@@ -39,6 +59,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Ponira Lab — Design, Branding & Development",
@@ -46,6 +67,7 @@ export const metadata: Metadata = {
       "Agência boutique carioca com três frentes: Studio, Creative e Systems.",
     images: ["/og-image.png"],
   },
+
   robots: {
     index: true,
     follow: true,
