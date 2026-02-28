@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Grainient from "@/Grainient";
@@ -17,7 +18,27 @@ const filters: { value: "all" | Lab; label: string }[] = [
 ];
 
 export default function CasesClient() {
-  const [active, setActive] = useState<"all" | Lab>("all");
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  // Lê o filtro da URL — fallback para "all" se ausente ou inválido
+  const labParam = searchParams.get("lab");
+  const validLabs: (Lab | "all")[] = ["all", "studio", "creative", "systems"];
+  const active = validLabs.includes(labParam as Lab) ? (labParam as Lab | "all") : "all";
+
+  // Atualiza a URL ao trocar filtro, sem rolar a página
+  const setFilter = useCallback(
+    (value: "all" | Lab) => {
+      const params = new URLSearchParams(searchParams.toString());
+      if (value === "all") {
+        params.delete("lab");
+      } else {
+        params.set("lab", value);
+      }
+      router.replace(`/cases?${params.toString()}`, { scroll: false });
+    },
+    [router, searchParams]
+  );
 
   const filtered = active === "all" ? cases : cases.filter((c) => c.lab === active);
 
@@ -57,7 +78,7 @@ export default function CasesClient() {
             {filters.map((f) => (
               <button
                 key={f.value}
-                onClick={() => setActive(f.value)}
+                onClick={() => setFilter(f.value)}
                 className={`whitespace-nowrap px-5 py-2 rounded-full font-body text-[10px] uppercase tracking-widest font-bold transition-all duration-300 ${
                   active === f.value
                     ? "bg-ponira-yellow text-ponira-brown"
@@ -90,7 +111,7 @@ export default function CasesClient() {
                         <img
                           src={c.cover}
                           alt={c.title}
-                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                         />
                       ) : (
                         <div className="absolute inset-0 bg-gradient-to-tr from-ponira-brown/60 to-transparent" />
