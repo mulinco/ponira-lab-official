@@ -4,6 +4,7 @@ import Hero from "@/app/components/Hero";
 import Manifesto from "@/app/components/Manifesto";
 import Labs from "@/app/components/Labs";
 import Showcase from "@/app/components/Showcase";
+import CrossLab from "@/app/components/CrossLab";
 import Founders from "@/app/components/Founders";
 import Footer from "@/app/components/Footer";
 import Grainient from "../Grainient";
@@ -42,6 +43,10 @@ export default function Home() {
 
         <SectionReveal exitAt={0.92}>
           <Showcase />
+        </SectionReveal>
+
+        <SectionReveal exitAt={0.92}>
+          <CrossLab />
         </SectionReveal>
 
         <SectionReveal exitAt={0.88}>

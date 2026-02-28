@@ -6,6 +6,7 @@ const navLinks = [
   { name: "Manifesto", href: "/#manifesto" },
   { name: "Labs", href: "/#labs" },
   { name: "Artefatos", href: "/#showcase" },
+  { name: "Pacotes", href: "/#pacotes" },
   { name: "Cases", href: "/cases" },
   { name: "Contato", href: "/contato" },
   { name: "Sócias", href: "/#founders" },
