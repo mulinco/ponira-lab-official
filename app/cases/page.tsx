@@ -8,6 +8,20 @@ import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import ViewportBlur from "@/app/components/ViewportBlur";
 import { cases, labMeta, type Lab } from "@/lib/cases";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cases",
+  description:
+    "Portfólio completo da Ponira Lab — identidades visuais, social media, websites e automações entregues pelo Studio, Creative e Systems.",
+  openGraph: {
+    title: "Cases | Ponira Lab",
+    description:
+      "Portfólio completo da Ponira Lab — identidades visuais, social media, websites e automações.",
+    url: "https://poniralab.com/cases",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+};
 
 const filters: { value: "all" | Lab; label: string }[] = [
   { value: "all", label: "Todos" },

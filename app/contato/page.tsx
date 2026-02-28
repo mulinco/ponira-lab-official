@@ -6,6 +6,20 @@ import Grainient from "@/Grainient";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import ViewportBlur from "@/app/components/ViewportBlur";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contato",
+  description:
+    "Inicie um projeto com a Ponira Lab. Design, branding, social media e desenvolvimento — preencha o formulário ou chame no WhatsApp.",
+  openGraph: {
+    title: "Contato | Ponira Lab",
+    description:
+      "Inicie um projeto com a Ponira Lab. Respondemos em até 24h úteis.",
+    url: "https://poniralab.com/contato",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+};
 
 const WHATSAPP_NUMBER = "5521998382038";
 const tiposProjeto = [
