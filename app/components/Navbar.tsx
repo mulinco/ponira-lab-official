@@ -119,23 +119,14 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.07 + 0.15 }}
-                  className="text-ponira-white/50 hover:text-ponira-yellow transition-colors font-display text-4xl italic uppercase tracking-tight"
+                  className="text-ponira-white/50 hover:text-ponira-yellow transition-colors font-display text-4xl italic uppercase tracking-wide"
                 >
                   {link.name}
                 </motion.a>
               ))}
 
-              <motion.a
-                href="mailto:contato@poniralab.com"
-                onClick={handleLinkClick}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: navLinks.length * 0.07 + 0.15 }}
-                className="mt-6 px-10 py-4 bg-ponira-yellow text-white rounded-full font-body text-xs uppercase tracking-widest hover:scale-105 transition"
-              >
-                Iniciar Conexão
-              </motion.a>
             </nav>
+            <img src="/logo-full.svg" alt="Ponira Lab" className="w-32 mt-12 opacity-10" />
 
             <p className="absolute bottom-10 text-ponira-white/10 font-body text-[8px] uppercase tracking-[0.3em]">
               Ponira Lab © 2026
