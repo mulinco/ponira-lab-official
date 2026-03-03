@@ -313,8 +313,7 @@ export default function CreativePage() {
                       </span>
                     </div>
                   </div>
-                  <Link
-                    href="/contato"
+                  <a href="https://www.poniralab.com/contato"
                     className={`text-center py-3 rounded-full font-body text-[10px] uppercase tracking-widest transition-all duration-300 ${
                       svc.highlight
                         ? "bg-rose-400 text-ponira-brown hover:scale-[1.02]"
@@ -322,7 +321,7 @@ export default function CreativePage() {
                     }`}
                   >
                     Solicitar orçamento
-                  </Link>
+                  </a>
                 </div>
               </motion.div>
             ))}
@@ -406,12 +405,11 @@ export default function CreativePage() {
                 </Link>
               </p>
             </div>
-            <Link
-              href="/contato"
+            <a href="https://www.poniralab.com/contato"
               className="shrink-0 px-10 py-5 bg-rose-400 text-ponira-brown font-body text-xs uppercase tracking-widest font-bold rounded-full hover:scale-105 transition-all duration-300 shadow-lg shadow-rose-900/20"
             >
               Iniciar projeto
-            </Link>
+            </a>
           </motion.div>
         </section>
 

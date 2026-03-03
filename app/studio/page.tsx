@@ -73,14 +73,6 @@ const tools = [
   "Brand System",
 ];
 
-const BASE = "https://poniralab.com";
-
-const navLinks = [
-  { name: "Iniciar Projeto", href: `${BASE}/#contato` },
-];
-
-
-
 // ─── COMPONENTE ───────────────────────────────────────────────────────────
 
 export default function StudioPage() {
@@ -273,8 +265,7 @@ export default function StudioPage() {
                       {svc.price}
                     </span>
                   </div>
-                  <Link
-                    href="/contato"
+                  <a href="https://www.poniralab.com/contato"
                     className={`text-center py-3 rounded-full font-body text-[10px] uppercase tracking-widest transition-all duration-300 ${
                       svc.highlight
                         ? "bg-amber-400 text-ponira-brown hover:scale-[1.02]"
@@ -282,7 +273,7 @@ export default function StudioPage() {
                     }`}
                   >
                     Solicitar orçamento
-                  </Link>
+                  </a>
                 </div>
               </motion.div>
             ))}
