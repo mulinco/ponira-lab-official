@@ -75,10 +75,10 @@ export default function CrossLab() {
       {/* Header */}
       <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-6">
         <div className="max-w-xl">
-          <h2 className="text-ponira-yellow font-display text-[10px] uppercase tracking-[0.5em] mb-6 font-bold opacity-85">
+          <h2 className="text-ponira-yellow font-display text-[10px] uppercase tracking-normal mb-6 font-bold opacity-85">
             Pacotes Cross-Lab
           </h2>
-          <p className="text-3xl md:text-4xl font-display text-ponira-white leading-normal">
+          <p className="text-3xl md:text-4xl font-display text-ponira-white tracking-normal leading-normal">
             Três frentes. Uma entrega coesa.
           </p>
         </div>
@@ -127,10 +127,10 @@ export default function CrossLab() {
             </div>
 
             {/* Nome e tagline */}
-            <h3 className="text-xl font-display italic text-ponira-white mb-2">
+            <h3 className="text-xl font-display italic text-ponira-white tracking-normal mb-2">
               {pkg.name}
             </h3>
-            <p className="text-ponira-white/40 font-body font-light text-sm leading-relaxed mb-8">
+            <p className="text-ponira-white/40 font-body font-light text-sm tracking-normal leading-relaxed mb-8">
               {pkg.tagline}
             </p>
 

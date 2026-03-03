@@ -20,16 +20,6 @@ const tiposProjeto = [
   { value: "Múltiplas frentes", label: "Múltiplas frentes" },
 ];
 
-const orcamentos = [
-  { value: "", label: "Selecione uma faixa" },
-  { value: "Até R$ 500", label: "Até R$ 500" },
-  { value: "R$ 500 – R$ 1.500", label: "R$ 500 – R$ 1.500" },
-  { value: "R$ 1.500 – R$ 3.000", label: "R$ 1.500 – R$ 3.000" },
-  { value: "R$ 3.000 – R$ 6.000", label: "R$ 3.000 – R$ 6.000" },
-  { value: "Acima de R$ 6.000", label: "Acima de R$ 6.000" },
-  { value: "A definir", label: "A definir" },
-];
-
 type FormData = {
   nome: string;
   email: string;
@@ -204,14 +194,6 @@ export default function ContatoClient() {
                     name="tipoProjeto"
                     options={tiposProjeto}
                     value={form.tipoProjeto}
-                    onChange={handleChange}
-                    required
-                  />
-                  <SelectField
-                    label="Orçamento estimado"
-                    name="orcamento"
-                    options={orcamentos}
-                    value={form.orcamento}
                     onChange={handleChange}
                     required
                   />

@@ -143,16 +143,6 @@ export default function CreativePage() {
             </p>
 
             <div className="flex flex-wrap gap-3">
-              <div className="flex flex-wrap gap-3 mt-10">
-                {tools.map((tool) => (
-                  <span
-                    key={tool}
-                    className="text-[9px] font-body font-black uppercase tracking-widest px-3 py-1.5 border border-rose-400/20 text-rose-400/60 rounded-full"
-                  >
-                    {tool}
-                  </span>
-                ))}
-              </div>
               <LogoLoop
                 items={tools}
                 speed={25}

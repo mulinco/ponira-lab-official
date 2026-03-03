@@ -119,17 +119,6 @@ export default function StudioPage() {
             </p>
 
             <div className="flex flex-wrap gap-3 mt-10">
-              <div className="flex flex-wrap gap-3 mt-10">
-                {tools.map((tool) => (
-                  <span
-                    key={tool}
-                    className="text-[9px] font-body font-black uppercase tracking-widest px-3 py-1.5 border border-amber-400/20 text-amber-400/60 rounded-full"
-                  >
-                    {tool}
-                  </span>
-                ))}
-              </div>
-
               <LogoLoop
                 items={tools}
                 speed={25}
