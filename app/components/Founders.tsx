@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Founders() {
   return (
@@ -24,7 +25,7 @@ export default function Founders() {
           className="space-y-8"
         >
           <div className="aspect-[4/5] bg-black/20 rounded-sm border border-ponira-white/5 grayscale hover:grayscale-0 transition-all duration-700">
-            {/* Placeholder para foto da Carol */}
+            <Image src="/carol-ponira.jpg" alt="Ana Carolina" width={600} height={900} />
           </div>
           <div>
             <span className="text-ponira-yellow font-body text-[10px] font-black tracking-[0.3em] uppercase mb-2 block">
@@ -46,7 +47,7 @@ export default function Founders() {
           className="space-y-8 md:mt-24"
         >
           <div className="aspect-[4/5] bg-black/20 rounded-sm border border-ponira-white/5 grayscale hover:grayscale-0 transition-all duration-700">
-            {/* Placeholder para foto da Maria */}
+            <Image src="/maria-ponira.jpg" alt="Maria Clara" width={600} height={900} />
           </div>
           <div>
             <span className="text-ponira-yellow font-body text-[10px] font-black tracking-[0.3em] uppercase mb-2 block">
