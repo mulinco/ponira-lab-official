@@ -7,11 +7,12 @@ const links = [
     id: "instagram",
     label: "Alma / Visual",
     title: "Instagram",
-    description: "Onde o propósito ganha forma. Portfólio visual e essência estética.",
+    description:
+      "Onde o propósito ganha forma. Portfólio visual e essência estética.",
     url: "https://instagram.com/poniralab",
     bg: "bg-[#CD7F32]/20",
     border: "border-[#CD7F32]/60",
-    text: "text-[#CD7F32]"
+    text: "text-[#CD7F32]",
   },
   {
     id: "tiktok",
@@ -21,17 +22,18 @@ const links = [
     url: "https://tiktok.com/@poniralab",
     bg: "bg-[#82933d]/20",
     border: "border-[#82933d]/60",
-    text: "text-[#82933d]"
+    text: "text-[#82933d]",
   },
   {
     id: "linkedin",
     label: "Corpo / Tecnologia",
     title: "LinkedIn",
-    description: "Engenharia de software e o back-end que sustenta a autoridade.",
+    description:
+      "Engenharia de software e o back-end que sustenta a autoridade.",
     url: "https://linkedin.com/company/poniralab",
     bg: "bg-[#FFB703]/15",
     border: "border-[#FFB703]/60",
-    text: "text-[#FFB703]"
+    text: "text-[#FFB703]",
   },
   {
     id: "website",
@@ -41,7 +43,7 @@ const links = [
     url: "https://poniralab.com",
     bg: "bg-white/5",
     border: "border-white/20",
-    text: "text-white/60"
+    text: "text-white/60",
   },
   {
     id: "whatsapp",
@@ -51,19 +53,15 @@ const links = [
     url: "https://wa.me/5521998382038",
     bg: "bg-white/5",
     border: "border-white/20",
-    text: "text-white/60"
-  }
+    text: "text-white/60",
+  },
 ];
 
 export default function Linktree() {
   return (
     <main className="relative min-h-screen bg-ponira-brown overflow-x-hidden">
       <div className="fixed inset-0 z-0">
-        <Grainient
-          color1="#5a5539"
-          color2="#3b2e0f"
-          color3="#9b682a"
-        />
+        <Grainient color1="#5a5539" color2="#3b2e0f" color3="#9b682a" />
       </div>
 
       <div className="relative z-10 px-6 py-12 flex flex-col items-center">
@@ -74,7 +72,9 @@ export default function Linktree() {
             src="/logo-icon.svg"
             className="w-16 h-16 mb-6 opacity-90 drop-shadow-2xl"
           />
-          <h1 className="text-3xl text-white font-display italic mb-2">Ponira Lab</h1>
+          <h1 className="text-3xl text-white font-display italic mb-2">
+            Ponira Lab
+          </h1>
           <p className="text-[10px] uppercase tracking-[0.4em] text-ponira-yellow font-bold">
             Corpo • Alma • Sopro
           </p>
@@ -93,7 +93,9 @@ export default function Linktree() {
               className={`block group relative p-6 rounded-2xl border backdrop-blur-md transition-all duration-500 hover:scale-[1.02] ${link.bg} ${link.border}`}
             >
               <div className="flex flex-col">
-                <span className={`text-[9px] uppercase tracking-widest font-black mb-1 ${link.text}`}>
+                <span
+                  className={`text-[9px] uppercase tracking-widest font-black mb-1 ${link.text}`}
+                >
                   {link.label}
                 </span>
                 <h2 className="text-xl font-display italic text-white group-hover:translate-x-1 transition-transform">
@@ -103,7 +105,9 @@ export default function Linktree() {
                   {link.description}
                 </p>
               </div>
-              <span className={`absolute top-6 right-6 text-lg transition-colors ${link.text}`}>
+              <span
+                className={`absolute top-6 right-6 text-lg transition-colors ${link.text}`}
+              >
                 ↗
               </span>
             </motion.a>

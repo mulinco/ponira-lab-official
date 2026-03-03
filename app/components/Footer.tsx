@@ -7,7 +7,6 @@ export default function Footer() {
     <footer className="py-12 px-6 border-t border-ponira-white/5 bg-black/5">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 items-start">
-
           {/* Contato */}
           <div className="md:col-span-1">
             <span className="text-ponira-bronze font-body text-[9px] uppercase tracking-[0.4em] mb-4 block font-bold opacity-60">
@@ -23,16 +22,26 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <span className="text-ponira-white/20 font-body text-[9px] uppercase tracking-widest block mb-4">Social</span>
+            <span className="text-ponira-white/20 font-body text-[9px] uppercase tracking-widest block mb-4">
+              Social
+            </span>
             <ul className="text-ponira-white/50 font-body text-[10px] space-y-2 uppercase tracking-tighter">
               {[
                 { label: "Instagram", href: "https://instagram.com/poniralab" },
-                { label: "LinkedIn", href: "https://linkedin.com/company/poniralab" },
+                {
+                  label: "LinkedIn",
+                  href: "https://linkedin.com/company/poniralab",
+                },
                 { label: "GitHub", href: "https://github.com/poniralab" },
                 { label: "TikTok", href: "https://tiktok.com/@poniralab" },
               ].map((s) => (
                 <li key={s.label}>
-                  <a href={s.href} target="_blank" rel="noopener noreferrer" className="hover:text-ponira-yellow transition-colors">
+                  <a
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-ponira-yellow transition-colors"
+                  >
                     {s.label}
                   </a>
                 </li>
@@ -42,7 +51,9 @@ export default function Footer() {
 
           {/* Labs */}
           <div>
-            <span className="text-ponira-white/20 font-body text-[9px] uppercase tracking-widest block mb-4">Labs</span>
+            <span className="text-ponira-white/20 font-body text-[9px] uppercase tracking-widest block mb-4">
+              Labs
+            </span>
             <ul className="text-ponira-white/50 font-body text-[10px] space-y-2 italic">
               {[
                 { label: "Creative", href: "https://creative.poniralab.com" },
@@ -50,7 +61,12 @@ export default function Footer() {
                 { label: "Systems", href: "https://systems.poniralab.com" },
               ].map((l) => (
                 <li key={l.label}>
-                  <a href={l.href} target="_blank" rel="noopener noreferrer" className="hover:text-ponira-yellow transition-colors">
+                  <a
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-ponira-yellow transition-colors"
+                  >
                     {l.label}
                   </a>
                 </li>
@@ -60,9 +76,13 @@ export default function Footer() {
 
           {/* Base */}
           <div className="md:text-right">
-            <span className="text-ponira-white/20 font-body text-[9px] uppercase tracking-widest block mb-4">Base</span>
+            <span className="text-ponira-white/20 font-body text-[9px] uppercase tracking-widest block mb-4">
+              Base
+            </span>
             <p className="text-ponira-white/50 font-body text-[10px] leading-relaxed uppercase">
-              Rio de Janeiro, RJ<br />Brasil
+              Rio de Janeiro, RJ
+              <br />
+              Brasil
             </p>
             <a
               href="https://wa.me/5521998382038"

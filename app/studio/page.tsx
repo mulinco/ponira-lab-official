@@ -8,6 +8,7 @@ import NavbarLab from "@/app/components/NavbarLab";
 import Footer from "@/app/components/Footer";
 import ViewportBlur from "@/app/components/ViewportBlur";
 import { cases } from "@/lib/cases";
+import LogoLoop from "@/components/LogoLoop";
 
 // ─── DADOS ────────────────────────────────────────────────────────────────
 
@@ -100,7 +101,9 @@ export default function StudioPage() {
               <span className="text-amber-400 font-body text-[9px] uppercase tracking-[0.5em] font-black">
                 Ponira Lab
               </span>
-              <span className="text-ponira-white/20 font-body text-[9px]">✦</span>
+              <span className="text-ponira-white/20 font-body text-[9px]">
+                ✦
+              </span>
               <span className="text-amber-400/60 font-body text-[9px] uppercase tracking-[0.5em] font-black">
                 Studio
               </span>
@@ -111,18 +114,28 @@ export default function StudioPage() {
             </h1>
 
             <p className="text-ponira-white/50 font-body font-light text-xl max-w-lg leading-relaxed mb-6">
-              Design & Branding. Construímos marcas que existem antes das palavras — identidades com método, intenção e história.
+              Design & Branding. Construímos marcas que existem antes das
+              palavras — identidades com método, intenção e história.
             </p>
 
             <div className="flex flex-wrap gap-3 mt-10">
-              {tools.map((tool) => (
-                <span
-                  key={tool}
-                  className="text-[9px] font-body font-black uppercase tracking-widest px-3 py-1.5 border border-amber-400/20 text-amber-400/60 rounded-full"
-                >
-                  {tool}
-                </span>
-              ))}
+              <div className="flex flex-wrap gap-3 mt-10">
+                {tools.map((tool) => (
+                  <span
+                    key={tool}
+                    className="text-[9px] font-body font-black uppercase tracking-widest px-3 py-1.5 border border-amber-400/20 text-amber-400/60 rounded-full"
+                  >
+                    {tool}
+                  </span>
+                ))}
+              </div>
+
+              <LogoLoop
+                items={tools}
+                speed={25}
+                accentColor="#FBBF24" // amber para Studio, #FB7185 para Creative, #38BDF8 para Systems
+                className="mt-10"
+              />
             </div>
           </motion.div>
         </section>
@@ -174,7 +187,9 @@ export default function StudioPage() {
                       />
                     ) : (
                       <div className="absolute inset-0 bg-gradient-to-tr from-amber-900/40 to-transparent flex items-center justify-center">
-                        <span className="text-amber-400/20 font-display text-6xl italic">✦</span>
+                        <span className="text-amber-400/20 font-display text-6xl italic">
+                          ✦
+                        </span>
                       </div>
                     )}
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-500 flex items-center justify-center">
@@ -265,7 +280,8 @@ export default function StudioPage() {
                       {svc.price}
                     </span>
                   </div>
-                  <a href="https://www.poniralab.com/contato"
+                  <a
+                    href="https://www.poniralab.com/contato"
                     className={`text-center py-3 rounded-full font-body text-[10px] uppercase tracking-widest transition-all duration-300 ${
                       svc.highlight
                         ? "bg-amber-400 text-ponira-brown hover:scale-[1.02]"
@@ -325,11 +341,14 @@ export default function StudioPage() {
                 Diário do Studio.
               </p>
               <p className="text-ponira-white/40 font-body font-light text-sm max-w-sm leading-relaxed">
-                Artigos sobre processo criativo, decisões de design e o que a Carol aprende construindo marcas.
+                Artigos sobre processo criativo, decisões de design e o que a
+                Carol aprende construindo marcas.
               </p>
             </div>
             <div className="flex flex-col items-center gap-3 shrink-0">
-              <span className="text-amber-400/40 font-display text-6xl italic">✦</span>
+              <span className="text-amber-400/40 font-display text-6xl italic">
+                ✦
+              </span>
               <span className="text-ponira-white/20 font-body text-[10px] uppercase tracking-widest">
                 Em breve
               </span>
@@ -352,15 +371,19 @@ export default function StudioPage() {
               </h2>
               <p className="text-ponira-white/40 font-body font-light text-base leading-relaxed">
                 Precisa de mais de uma frente?{" "}
-                <Link href="/#pacotes" className="text-amber-400/70 hover:text-amber-400 transition-colors">
+                <Link
+                  href="/#pacotes"
+                  className="text-amber-400/70 hover:text-amber-400 transition-colors"
+                >
                   Conheça nossos pacotes cross-lab →
                 </Link>
               </p>
             </div>
-            <a href="https://www.poniralab.com/contato"
-            className="shrink-0 px-10 py-5 bg-amber-400 text-ponira-brown font-body text-xs uppercase tracking-widest font-bold rounded-full hover:scale-105 transition-all duration-300 shadow-lg shadow-amber-900/20"
+            <a
+              href="https://www.poniralab.com/contato"
+              className="shrink-0 px-10 py-5 bg-amber-400 text-ponira-brown font-body text-xs uppercase tracking-widest font-bold rounded-full hover:scale-105 transition-all duration-300 shadow-lg shadow-amber-900/20"
             >
-            Iniciar projeto
+              Iniciar projeto
             </a>
           </motion.div>
         </section>

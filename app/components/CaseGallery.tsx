@@ -107,14 +107,20 @@ function Lightbox({
       {hasSiblings && (
         <>
           <button
-            onClick={(e) => { e.stopPropagation(); prev(); }}
+            onClick={(e) => {
+              e.stopPropagation();
+              prev();
+            }}
             className="absolute left-4 md:left-8 z-10 w-11 h-11 flex items-center justify-center rounded-full border border-ponira-white/10 text-ponira-white/40 hover:text-ponira-yellow hover:border-ponira-yellow/40 transition-all duration-300 text-lg"
             aria-label="Anterior"
           >
             ←
           </button>
           <button
-            onClick={(e) => { e.stopPropagation(); next(); }}
+            onClick={(e) => {
+              e.stopPropagation();
+              next();
+            }}
             className="absolute right-4 md:right-8 z-10 w-11 h-11 flex items-center justify-center rounded-full border border-ponira-white/10 text-ponira-white/40 hover:text-ponira-yellow hover:border-ponira-yellow/40 transition-all duration-300 text-lg"
             aria-label="Próxima"
           >
@@ -129,7 +135,10 @@ function Lightbox({
           {images.map((img, i) => (
             <button
               key={i}
-              onClick={(e) => { e.stopPropagation(); setCurrent(i); }}
+              onClick={(e) => {
+                e.stopPropagation();
+                setCurrent(i);
+              }}
               className={`w-10 h-7 overflow-hidden rounded-[2px] border transition-all duration-300 ${
                 i === current
                   ? "border-ponira-yellow/60 opacity-100"

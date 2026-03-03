@@ -8,6 +8,7 @@ import NavbarLab from "@/app/components/NavbarLab";
 import Footer from "@/app/components/Footer";
 import ViewportBlur from "@/app/components/ViewportBlur";
 import { cases } from "@/lib/cases";
+import LogoLoop from "@/components/LogoLoop";
 
 // ─── DADOS ────────────────────────────────────────────────────────────────
 
@@ -60,11 +61,20 @@ const services = [
 ];
 
 const addons = [
-  { name: "Identidade visual para redes (kit de templates)", price: "+ R$ 500" },
+  {
+    name: "Identidade visual para redes (kit de templates)",
+    price: "+ R$ 500",
+  },
   { name: "Roteiro e direção de vídeo (reels/tiktok)", price: "+ R$ 400/mês" },
   { name: "Gestão de comentários e DMs", price: "+ R$ 300/mês" },
-  { name: "Campanha pontual (lançamento, data especial)", price: "a partir de R$ 400" },
-  { name: "Identidade visual para stories (destaques + highlights)", price: "+ R$ 250" },
+  {
+    name: "Campanha pontual (lançamento, data especial)",
+    price: "a partir de R$ 400",
+  },
+  {
+    name: "Identidade visual para stories (destaques + highlights)",
+    price: "+ R$ 250",
+  },
 ];
 
 const tools = [
@@ -115,7 +125,9 @@ export default function CreativePage() {
               <span className="text-rose-400 font-body text-[9px] uppercase tracking-[0.5em] font-black">
                 Ponira Lab
               </span>
-              <span className="text-ponira-white/20 font-body text-[9px]">✦</span>
+              <span className="text-ponira-white/20 font-body text-[9px]">
+                ✦
+              </span>
               <span className="text-rose-400/60 font-body text-[9px] uppercase tracking-[0.5em] font-black">
                 Creative
               </span>
@@ -126,18 +138,27 @@ export default function CreativePage() {
             </h1>
 
             <p className="text-ponira-white/50 font-body font-light text-xl max-w-lg leading-relaxed mb-10">
-              Social Media & Marketing. Conteúdo que para o scroll, comunica com intenção e constrói presença real nas redes.
+              Social Media & Marketing. Conteúdo que para o scroll, comunica com
+              intenção e constrói presença real nas redes.
             </p>
 
             <div className="flex flex-wrap gap-3">
-              {tools.map((tool) => (
-                <span
-                  key={tool}
-                  className="text-[9px] font-body font-black uppercase tracking-widest px-3 py-1.5 border border-rose-400/20 text-rose-400/60 rounded-full"
-                >
-                  {tool}
-                </span>
-              ))}
+              <div className="flex flex-wrap gap-3 mt-10">
+                {tools.map((tool) => (
+                  <span
+                    key={tool}
+                    className="text-[9px] font-body font-black uppercase tracking-widest px-3 py-1.5 border border-rose-400/20 text-rose-400/60 rounded-full"
+                  >
+                    {tool}
+                  </span>
+                ))}
+              </div>
+              <LogoLoop
+                items={tools}
+                speed={25}
+                accentColor="#FB7185"
+                className="mt-10"
+              />
             </div>
           </motion.div>
         </section>
@@ -156,7 +177,8 @@ export default function CreativePage() {
                 Nichos que atendemos
               </h2>
               <p className="text-ponira-white/40 font-body font-light text-sm leading-relaxed">
-                Cada nicho tem sua linguagem. Criamos conteúdo que fala com a audiência certa, não para todo mundo.
+                Cada nicho tem sua linguagem. Criamos conteúdo que fala com a
+                audiência certa, não para todo mundo.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
@@ -217,7 +239,9 @@ export default function CreativePage() {
                       />
                     ) : (
                       <div className="absolute inset-0 bg-gradient-to-tr from-rose-900/40 to-transparent flex items-center justify-center">
-                        <span className="text-rose-400/20 font-display text-6xl italic">✦</span>
+                        <span className="text-rose-400/20 font-display text-6xl italic">
+                          ✦
+                        </span>
                       </div>
                     )}
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-500 flex items-center justify-center">
@@ -313,7 +337,8 @@ export default function CreativePage() {
                       </span>
                     </div>
                   </div>
-                  <a href="https://www.poniralab.com/contato"
+                  <a
+                    href="https://www.poniralab.com/contato"
                     className={`text-center py-3 rounded-full font-body text-[10px] uppercase tracking-widest transition-all duration-300 ${
                       svc.highlight
                         ? "bg-rose-400 text-ponira-brown hover:scale-[1.02]"
@@ -373,11 +398,14 @@ export default function CreativePage() {
                 Diário do Creative.
               </p>
               <p className="text-ponira-white/40 font-body font-light text-sm max-w-sm leading-relaxed">
-                Artigos sobre estratégia de conteúdo, tendências de social media e o que a Carol aprende criando para marcas reais.
+                Artigos sobre estratégia de conteúdo, tendências de social media
+                e o que a Carol aprende criando para marcas reais.
               </p>
             </div>
             <div className="flex flex-col items-center gap-3 shrink-0">
-              <span className="text-rose-400/40 font-display text-6xl italic">✦</span>
+              <span className="text-rose-400/40 font-display text-6xl italic">
+                ✦
+              </span>
               <span className="text-ponira-white/20 font-body text-[10px] uppercase tracking-widest">
                 Em breve
               </span>
@@ -400,12 +428,16 @@ export default function CreativePage() {
               </h2>
               <p className="text-ponira-white/40 font-body font-light text-base leading-relaxed">
                 Precisa de mais de uma frente?{" "}
-                <Link href="/#pacotes" className="text-rose-400/70 hover:text-rose-400 transition-colors">
+                <Link
+                  href="/#pacotes"
+                  className="text-rose-400/70 hover:text-rose-400 transition-colors"
+                >
                   Conheça nossos pacotes cross-lab →
                 </Link>
               </p>
             </div>
-            <a href="https://www.poniralab.com/contato"
+            <a
+              href="https://www.poniralab.com/contato"
               className="shrink-0 px-10 py-5 bg-rose-400 text-ponira-brown font-body text-xs uppercase tracking-widest font-bold rounded-full hover:scale-105 transition-all duration-300 shadow-lg shadow-rose-900/20"
             >
               Iniciar projeto

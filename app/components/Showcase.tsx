@@ -8,7 +8,6 @@ const featured = cases.filter((c) => c.featured);
 export default function Showcase() {
   return (
     <section id="showcase" className="py-32 px-6 max-w-7xl mx-auto">
-
       {/* Header */}
       <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-6">
         <div className="max-w-xl">
@@ -94,17 +93,19 @@ export default function Showcase() {
         className="mt-24 pt-12 border-t border-ponira-white/5 flex flex-col md:flex-row items-center justify-between gap-6"
       >
         <p className="text-ponira-white/30 font-body font-light text-sm">
-          {cases.length} projetos no total — sistemas, identidades, social media e automação.
+          {cases.length} projetos no total — sistemas, identidades, social media
+          e automação.
         </p>
         <Link
           href="/cases"
           className="group flex items-center gap-3 px-8 py-4 border border-ponira-white/10 hover:border-ponira-yellow/40 rounded-full font-body text-xs uppercase tracking-widest text-ponira-white/40 hover:text-ponira-yellow transition-all duration-300"
         >
           Explorar todos os cases
-          <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+          <span className="group-hover:translate-x-1 transition-transform duration-300">
+            →
+          </span>
         </Link>
       </motion.div>
-
     </section>
   );
 }

@@ -8,6 +8,7 @@ import NavbarLab from "@/app/components/NavbarLab";
 import Footer from "@/app/components/Footer";
 import ViewportBlur from "@/app/components/ViewportBlur";
 import { cases } from "@/lib/cases";
+import LogoLoop from "@/components/LogoLoop";
 
 // ─── DADOS ────────────────────────────────────────────────────────────────
 
@@ -61,7 +62,10 @@ const addons = [
   { name: "Formulário com notificação automática", price: "+ R$ 200" },
   { name: "Webhook / integração com API externa", price: "+ R$ 600" },
   { name: "Painel de dados (dashboard interativo)", price: "+ R$ 800" },
-  { name: "Manutenção mensal e suporte técnico", price: "a partir de R$ 300/mês" },
+  {
+    name: "Manutenção mensal e suporte técnico",
+    price: "a partir de R$ 300/mês",
+  },
 ];
 
 const tools = [
@@ -82,22 +86,26 @@ const tools = [
 const capabilities = [
   {
     title: "Websites & Aplicações",
-    description: "Sites institucionais, landing pages, portfólios, hubs digitais — construídos com Next.js, performáticos e com design que respeita a identidade da marca.",
+    description:
+      "Sites institucionais, landing pages, portfólios, hubs digitais — construídos com Next.js, performáticos e com design que respeita a identidade da marca.",
     icon: "◻",
   },
   {
     title: "Automação & Integração",
-    description: "Formulários inteligentes, notificações automáticas, integrações com ferramentas que você já usa. Eliminar trabalho manual é engenharia aplicada com propósito.",
+    description:
+      "Formulários inteligentes, notificações automáticas, integrações com ferramentas que você já usa. Eliminar trabalho manual é engenharia aplicada com propósito.",
     icon: "⟳",
   },
   {
     title: "Data & Analytics",
-    description: "Dashboards interativos, pipelines de dados, análise exploratória. Transformamos dados brutos em perspectiva visual e acionável.",
+    description:
+      "Dashboards interativos, pipelines de dados, análise exploratória. Transformamos dados brutos em perspectiva visual e acionável.",
     icon: "◈",
   },
   {
     title: "Identidade Digital",
-    description: "Hubs de link, portfólios digitais e páginas personalizadas que traduzem uma identidade visual para o código com a mesma fidelidade que o design original.",
+    description:
+      "Hubs de link, portfólios digitais e páginas personalizadas que traduzem uma identidade visual para o código com a mesma fidelidade que o design original.",
     icon: "✦",
   },
 ];
@@ -127,7 +135,9 @@ export default function SystemsPage() {
               <span className="text-sky-400 font-body text-[9px] uppercase tracking-[0.5em] font-black">
                 Ponira Lab
               </span>
-              <span className="text-ponira-white/20 font-body text-[9px]">✦</span>
+              <span className="text-ponira-white/20 font-body text-[9px]">
+                ✦
+              </span>
               <span className="text-sky-400/60 font-body text-[9px] uppercase tracking-[0.5em] font-black">
                 Systems
               </span>
@@ -138,18 +148,18 @@ export default function SystemsPage() {
             </h1>
 
             <p className="text-ponira-white/50 font-body font-light text-xl max-w-lg leading-relaxed mb-10">
-              Dev & Automação. Construímos o lado técnico de marcas que precisam funcionar tão bem quanto parecem — sistemas, sites e ferramentas com intenção.
+              Dev & Automação. Construímos o lado técnico de marcas que precisam
+              funcionar tão bem quanto parecem — sistemas, sites e ferramentas
+              com intenção.
             </p>
 
             <div className="flex flex-wrap gap-3">
-              {tools.map((tool) => (
-                <span
-                  key={tool}
-                  className="text-[9px] font-body font-black uppercase tracking-widest px-3 py-1.5 border border-sky-400/20 text-sky-400/60 rounded-full"
-                >
-                  {tool}
-                </span>
-              ))}
+              <LogoLoop
+                items={tools}
+                speed={25}
+                accentColor="#38BDF8"
+                className="mt-10"
+              />
             </div>
           </motion.div>
         </section>
@@ -181,7 +191,9 @@ export default function SystemsPage() {
                 viewport={{ once: true }}
                 className="p-8 border border-ponira-white/5 bg-black/10 rounded-sm hover:border-sky-400/20 transition-colors duration-300"
               >
-                <span className="text-sky-400/40 text-2xl block mb-4">{cap.icon}</span>
+                <span className="text-sky-400/40 text-2xl block mb-4">
+                  {cap.icon}
+                </span>
                 <h3 className="text-lg font-display italic text-ponira-white mb-3">
                   {cap.title}
                 </h3>
@@ -238,7 +250,9 @@ export default function SystemsPage() {
                       />
                     ) : (
                       <div className="absolute inset-0 bg-gradient-to-tr from-sky-900/40 to-transparent flex items-center justify-center">
-                        <span className="text-sky-400/20 font-display text-6xl italic">✦</span>
+                        <span className="text-sky-400/20 font-display text-6xl italic">
+                          ✦
+                        </span>
                       </div>
                     )}
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-500 flex items-center justify-center">
@@ -271,7 +285,10 @@ export default function SystemsPage() {
                   </p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {c.tools.slice(0, 4).map((tool) => (
-                      <span key={tool} className="text-[8px] font-mono text-sky-400/30 uppercase tracking-wider">
+                      <span
+                        key={tool}
+                        className="text-[8px] font-mono text-sky-400/30 uppercase tracking-wider"
+                      >
                         {tool}
                       </span>
                     ))}
@@ -349,7 +366,8 @@ export default function SystemsPage() {
                       {svc.price}
                     </span>
                   </div>
-                  <a href="https://www.poniralab.com/contato"
+                  <a
+                    href="https://www.poniralab.com/contato"
                     className={`text-center py-3 rounded-full font-body text-[10px] uppercase tracking-widest transition-all duration-300 ${
                       svc.highlight
                         ? "bg-sky-400 text-ponira-brown hover:scale-[1.02]"
@@ -409,11 +427,14 @@ export default function SystemsPage() {
                 Diário do Systems.
               </p>
               <p className="text-ponira-white/40 font-body font-light text-sm max-w-sm leading-relaxed">
-                Artigos sobre desenvolvimento, arquitetura de software e o que a Maria aprende construindo sistemas para o mundo real.
+                Artigos sobre desenvolvimento, arquitetura de software e o que a
+                Maria aprende construindo sistemas para o mundo real.
               </p>
             </div>
             <div className="flex flex-col items-center gap-3 shrink-0">
-              <span className="text-sky-400/40 font-display text-6xl italic">✦</span>
+              <span className="text-sky-400/40 font-display text-6xl italic">
+                ✦
+              </span>
               <span className="text-ponira-white/20 font-body text-[10px] uppercase tracking-widest">
                 Em breve
               </span>
@@ -436,12 +457,16 @@ export default function SystemsPage() {
               </h2>
               <p className="text-ponira-white/40 font-body font-light text-base leading-relaxed">
                 Precisa de mais de uma frente?{" "}
-                <Link href="/#pacotes" className="text-sky-400/70 hover:text-sky-400 transition-colors">
+                <Link
+                  href="/#pacotes"
+                  className="text-sky-400/70 hover:text-sky-400 transition-colors"
+                >
                   Conheça nossos pacotes cross-lab →
                 </Link>
               </p>
             </div>
-            <a href="https://www.poniralab.com/contato"
+            <a
+              href="https://www.poniralab.com/contato"
               className="shrink-0 px-10 py-5 bg-sky-400 text-ponira-brown font-body text-xs uppercase tracking-widest font-bold rounded-full hover:scale-105 transition-all duration-300 shadow-lg shadow-sky-900/20"
             >
               Iniciar projeto

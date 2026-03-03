@@ -13,7 +13,10 @@ export async function POST(req: NextRequest) {
     const { nome, email, whatsapp, tipoProjeto, orcamento } = body;
 
     if (!nome || !email || !tipoProjeto || !orcamento) {
-      return NextResponse.json({ error: "Campos obrigatórios ausentes." }, { status: 400 });
+      return NextResponse.json(
+        { error: "Campos obrigatórios ausentes." },
+        { status: 400 },
+      );
     }
 
     // ── 1. Email interno para a Ponira Lab ──────────────────────────────
@@ -22,7 +25,13 @@ export async function POST(req: NextRequest) {
       to: TO_EMAIL,
       replyTo: email,
       subject: `Novo contato: ${nome} — ${tipoProjeto}`,
-      html: internalEmailHtml({ nome, email, whatsapp, tipoProjeto, orcamento }),
+      html: internalEmailHtml({
+        nome,
+        email,
+        whatsapp,
+        tipoProjeto,
+        orcamento,
+      }),
     });
 
     // ── 2. Auto-reply para o visitante ──────────────────────────────────

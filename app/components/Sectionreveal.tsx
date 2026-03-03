@@ -14,7 +14,11 @@ type SectionRevealProps = React.PropsWithChildren<{
   exitAt?: number;
 }>;
 
-export default function SectionReveal({ children, className, exitAt = 0.75 }: SectionRevealProps) {
+export default function SectionReveal({
+  children,
+  className,
+  exitAt = 0.75,
+}: SectionRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -25,19 +29,19 @@ export default function SectionReveal({ children, className, exitAt = 0.75 }: Se
   const blur = useTransform(
     scrollYProgress,
     [0, 0.15, exitAt, 1],
-    ["blur(15px)", "blur(0px)", "blur(0px)", "blur(15px)"]
+    ["blur(15px)", "blur(0px)", "blur(0px)", "blur(15px)"],
   );
 
   const opacity = useTransform(
     scrollYProgress,
     [0, 0.15, exitAt, 1],
-    [0, 1, 1, 0]
+    [0, 1, 1, 0],
   );
 
   const y = useTransform(
     scrollYProgress,
     [0, 0.15, exitAt, 1],
-    ["60px", "0px", "0px", "-60px"]
+    ["60px", "0px", "0px", "-60px"],
   );
 
   return (

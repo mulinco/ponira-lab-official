@@ -2,7 +2,8 @@
 
 import { NextRequest, NextResponse } from "next/server";
 
-export function proxy(req: NextRequest) {  // ← precisa ser "proxy"
+export function proxy(req: NextRequest) {
+  // ← precisa ser "proxy"
   const host = req.headers.get("host") || "";
 
   if (host.startsWith("linktree.")) {

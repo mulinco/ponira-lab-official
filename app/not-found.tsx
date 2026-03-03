@@ -43,7 +43,8 @@ export default function NotFound() {
                 Este caminho ainda não foi construído.
               </h1>
               <p className="text-ponira-white/40 font-body font-light text-base leading-relaxed mb-10 max-w-sm mx-auto">
-                A página que você procura não existe ou foi movida. Mas tudo que construímos está por aqui.
+                A página que você procura não existe ou foi movida. Mas tudo que
+                construímos está por aqui.
               </p>
 
               {/* Links */}

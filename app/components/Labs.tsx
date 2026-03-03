@@ -7,25 +7,28 @@ const labs = [
     category: "LAB_01 / SOPRO",
     title: "Creative",
     role: "Estratégia & Marketing",
-    description: "Gestão de redes sociais, tráfego pago e fotografia afetiva. A interface entre a marca e o mundo.",
-    url: "https://creative.poniralab.com"
+    description:
+      "Gestão de redes sociais, tráfego pago e fotografia afetiva. A interface entre a marca e o mundo.",
+    url: "https://creative.poniralab.com",
   },
   {
     id: "studio",
     category: "LAB_02 / ALMA",
     title: "Studio",
     role: "Design & Branding",
-    description: "Identidades visuais, UI/UX e design estratégico. Onde a alma e o propósito ganham forma visual.",
-    url: "https://studio.poniralab.com"
+    description:
+      "Identidades visuais, UI/UX e design estratégico. Onde a alma e o propósito ganham forma visual.",
+    url: "https://studio.poniralab.com",
   },
   {
     id: "systems",
     category: "LAB_03 / CORPO",
     title: "Systems",
     role: "Dev & Automação",
-    description: "Arquitetura de sistemas, APIs e automação de processos. A engenharia bruta que sustenta a autoridade.",
-    url: "https://systems.poniralab.com"
-  }
+    description:
+      "Arquitetura de sistemas, APIs e automação de processos. A engenharia bruta que sustenta a autoridade.",
+    url: "https://systems.poniralab.com",
+  },
 ];
 
 export default function Labs() {
@@ -46,7 +49,7 @@ export default function Labs() {
           >
             <div className="flex justify-between items-start mb-12">
               <span className="text-ponira-yellow font-mono text-[10px] tracking-[0.3em] font-bold">
-             {lab.category}
+                {lab.category}
               </span>
               <span className="text-ponira-white/20 group-hover:text-ponira-yellow transition-colors font-body text-xs font-bold uppercase tracking-widest">
                 Explore →

@@ -6,16 +6,16 @@
 
 /* Carregamento Manual das Fontes - Puxando da pasta /public */
 @font-face {
-  font-family: 'StelkaUltra';
-  src: url('/fonts/strelka-ultra.otf') format('opentype');
+  font-family: "StelkaUltra";
+  src: url("/fonts/strelka-ultra.otf") format("opentype");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'ArchivoVariable';
-  src: url('/fonts/archivo-variable.ttf') format('truetype-variations');
+  font-family: "ArchivoVariable";
+  src: url("/fonts/archivo-variable.ttf") format("truetype-variations");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -23,15 +23,15 @@
 
 @theme inline {
   /* Cores Ponira */
-  --color-ponira-brown: #2B1B16;
-  --color-ponira-moss: #2D4723;
+  --color-ponira-brown: #2b1b16;
+  --color-ponira-moss: #2d4723;
   --color-ponira-bronze: #7a542e;
-  --color-ponira-white: #F5F5F5;
-  --color-ponira-yellow: #C68D07;
+  --color-ponira-white: #f5f5f5;
+  --color-ponira-yellow: #c68d07;
 
   /* Mapeando as fontes para as classes do Tailwind */
-  --font-display: 'StelkaUltra', sans-serif;
-  --font-body: 'ArchivoVariable', sans-serif;
+  --font-display: "StelkaUltra", sans-serif;
+  --font-body: "ArchivoVariable", sans-serif;
 
   /* Sistema Shadcn/UI e Variáveis de Raio */
   --radius-sm: calc(var(--radius) - 4px);
@@ -47,24 +47,28 @@
 
 body {
   background-color: var(--background);
-  font-family: 'ArchivoVariable', sans-serif; /* Archivo como padrão para o site todo */
+  font-family:
+    "ArchivoVariable", sans-serif; /* Archivo como padrão para o site todo */
   color: var(--foreground);
 }
 
 /* Configuração de Títulos Padrão (Sem !important para permitir sobrescrever) */
-h1, h2, h3, h4 {
-  font-family: 'StelkaUltra', sans-serif;
+h1,
+h2,
+h3,
+h4 {
+  font-family: "StelkaUltra", sans-serif;
   font-weight: 900;
   font-style: italic;
 }
 
 /* Classes Utilitárias Forçadas */
 .font-display {
-  font-family: 'StelkaUltra', sans-serif !important;
+  font-family: "StelkaUltra", sans-serif !important;
 }
 
 .font-body {
-  font-family: 'ArchivoVariable', sans-serif !important;
+  font-family: "ArchivoVariable", sans-serif !important;
 }
 
 /* --- VARIÁVEIS DE SISTEMA (Cores e Temas) --- */

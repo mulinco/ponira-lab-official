@@ -57,7 +57,9 @@ export default function CaseClient({ params }: Props) {
               >
                 ← Cases
               </Link>
-              <span className="text-ponira-white/10 font-body text-[10px]">/</span>
+              <span className="text-ponira-white/10 font-body text-[10px]">
+                /
+              </span>
               <span className="text-ponira-yellow font-body text-[10px] uppercase tracking-widest">
                 {labMeta[c.lab].label}
               </span>
@@ -92,7 +94,6 @@ export default function CaseClient({ params }: Props) {
         {/* ── CONTEÚDO ── */}
         <section className="py-24 px-6 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
-
             <aside className="md:col-span-3 space-y-10">
               <div>
                 <span className="text-ponira-white/20 font-body text-[9px] uppercase tracking-widest block mb-4">
@@ -100,7 +101,12 @@ export default function CaseClient({ params }: Props) {
                 </span>
                 <ul className="space-y-2">
                   {c.tools.map((t) => (
-                    <li key={t} className="text-ponira-white/60 font-body text-sm font-light">{t}</li>
+                    <li
+                      key={t}
+                      className="text-ponira-white/60 font-body text-sm font-light"
+                    >
+                      {t}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -109,8 +115,12 @@ export default function CaseClient({ params }: Props) {
                 <span className="text-ponira-white/20 font-body text-[9px] uppercase tracking-widest block mb-4">
                   Frente
                 </span>
-                <p className="text-ponira-white/60 font-body text-sm font-light">{labMeta[c.lab].label}</p>
-                <p className="text-ponira-white/30 font-body text-xs font-light mt-1">{labMeta[c.lab].description}</p>
+                <p className="text-ponira-white/60 font-body text-sm font-light">
+                  {labMeta[c.lab].label}
+                </p>
+                <p className="text-ponira-white/30 font-body text-xs font-light mt-1">
+                  {labMeta[c.lab].description}
+                </p>
               </div>
 
               {c.externalUrl && (
@@ -126,37 +136,74 @@ export default function CaseClient({ params }: Props) {
             </aside>
 
             <div className="md:col-span-9 space-y-20">
-
               {/* 01 Contexto */}
-              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}>
-                <span className="text-ponira-yellow font-body text-[9px] uppercase tracking-[0.4em] font-bold opacity-60 block mb-6">01 / Contexto</span>
-                <p className="text-ponira-white/80 font-body font-light text-xl leading-relaxed max-w-2xl">{c.context}</p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
+              >
+                <span className="text-ponira-yellow font-body text-[9px] uppercase tracking-[0.4em] font-bold opacity-60 block mb-6">
+                  01 / Contexto
+                </span>
+                <p className="text-ponira-white/80 font-body font-light text-xl leading-relaxed max-w-2xl">
+                  {c.context}
+                </p>
               </motion.div>
 
               {section1.length > 0 && (
-                <CaseGallery images={section1} layout="duo" centerCrop={centerCrop} />
+                <CaseGallery
+                  images={section1}
+                  layout="duo"
+                  centerCrop={centerCrop}
+                />
               )}
 
               {/* 02 Processo */}
-              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}>
-                <span className="text-ponira-yellow font-body text-[9px] uppercase tracking-[0.4em] font-bold opacity-60 block mb-6">02 / Processo</span>
-                <p className="text-ponira-white/80 font-body font-light text-xl leading-relaxed max-w-2xl">{c.process}</p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
+              >
+                <span className="text-ponira-yellow font-body text-[9px] uppercase tracking-[0.4em] font-bold opacity-60 block mb-6">
+                  02 / Processo
+                </span>
+                <p className="text-ponira-white/80 font-body font-light text-xl leading-relaxed max-w-2xl">
+                  {c.process}
+                </p>
               </motion.div>
 
               {section2.length > 0 && (
-                <CaseGallery images={section2} layout="single" centerCrop={centerCrop} />
+                <CaseGallery
+                  images={section2}
+                  layout="single"
+                  centerCrop={centerCrop}
+                />
               )}
 
               {/* 03 Resultado */}
-              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}>
-                <span className="text-ponira-yellow font-body text-[9px] uppercase tracking-[0.4em] font-bold opacity-60 block mb-6">03 / Resultado</span>
-                <p className="text-ponira-white/80 font-body font-light text-xl leading-relaxed max-w-2xl">{c.result}</p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
+              >
+                <span className="text-ponira-yellow font-body text-[9px] uppercase tracking-[0.4em] font-bold opacity-60 block mb-6">
+                  03 / Resultado
+                </span>
+                <p className="text-ponira-white/80 font-body font-light text-xl leading-relaxed max-w-2xl">
+                  {c.result}
+                </p>
               </motion.div>
 
               {section3.length > 0 && (
-                <CaseGallery images={section3} layout="grid" centerCrop={centerCrop} />
+                <CaseGallery
+                  images={section3}
+                  layout="grid"
+                  centerCrop={centerCrop}
+                />
               )}
-
             </div>
           </div>
         </section>
@@ -164,13 +211,24 @@ export default function CaseClient({ params }: Props) {
         {/* ── PRÓXIMO CASE ── */}
         <section className="py-24 px-6 border-t border-ponira-white/5">
           <div className="max-w-7xl mx-auto">
-            <span className="text-ponira-white/20 font-body text-[9px] uppercase tracking-widest block mb-8">Próximo Case</span>
-            <Link href={`/cases/${next.slug}`} className="group flex items-end justify-between gap-6">
+            <span className="text-ponira-white/20 font-body text-[9px] uppercase tracking-widest block mb-8">
+              Próximo Case
+            </span>
+            <Link
+              href={`/cases/${next.slug}`}
+              className="group flex items-end justify-between gap-6"
+            >
               <div>
-                <span className="text-ponira-yellow font-body text-[10px] uppercase tracking-[0.3em] font-bold opacity-60 block mb-3">{next.category}</span>
-                <h2 className="text-4xl md:text-6xl font-display italic text-ponira-white group-hover:translate-x-3 transition-transform duration-500">{next.title}</h2>
+                <span className="text-ponira-yellow font-body text-[10px] uppercase tracking-[0.3em] font-bold opacity-60 block mb-3">
+                  {next.category}
+                </span>
+                <h2 className="text-4xl md:text-6xl font-display italic text-ponira-white group-hover:translate-x-3 transition-transform duration-500">
+                  {next.title}
+                </h2>
               </div>
-              <span className="text-ponira-yellow text-4xl group-hover:translate-x-2 transition-transform duration-300 shrink-0 mb-2">→</span>
+              <span className="text-ponira-yellow text-4xl group-hover:translate-x-2 transition-transform duration-300 shrink-0 mb-2">
+                →
+              </span>
             </Link>
           </div>
         </section>

@@ -8,12 +8,12 @@ const BASE_URL = "https://poniralab.com";
 
 const rawNavLinks = [
   { name: "Manifesto", href: "/#manifesto" },
-  { name: "Labs",      href: "/#labs" },
+  { name: "Labs", href: "/#labs" },
   { name: "Artefatos", href: "/#showcase" },
-  { name: "Pacotes",   href: "/#pacotes" },
-  { name: "Cases",     href: "/cases" },
-  { name: "Contato",   href: "/contato" },
-  { name: "Sócias",    href: "/#founders" },
+  { name: "Pacotes", href: "/#pacotes" },
+  { name: "Cases", href: "/cases" },
+  { name: "Contato", href: "/contato" },
+  { name: "Sócias", href: "/#founders" },
 ];
 
 function useIsSubdomain() {
@@ -65,8 +65,8 @@ export default function Navbar() {
         {/* ── Desktop links ── */}
         <div className="hidden md:flex gap-10 pointer-events-auto bg-black/5 backdrop-blur-sm border border-ponira-white/5 px-8 py-3 rounded-full">
           {navLinks.map((link) => (
-            
-             <a key={link.name}
+            <a
+              key={link.name}
               href={link.href}
               className="text-ponira-white/30 hover:text-ponira-yellow transition-colors font-body text-[9px] uppercase tracking-[0.2em] font-bold"
             >
@@ -91,9 +91,18 @@ export default function Navbar() {
           className="md:hidden pointer-events-auto flex flex-col gap-[5px] p-2 group"
           aria-label="Menu"
         >
-          <motion.span animate={mobileOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }} className="block w-5 h-px bg-ponira-white/40 group-hover:bg-ponira-yellow transition-colors origin-center" />
-          <motion.span animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }} className="block w-5 h-px bg-ponira-white/40 group-hover:bg-ponira-yellow transition-colors" />
-          <motion.span animate={mobileOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }} className="block w-5 h-px bg-ponira-white/40 group-hover:bg-ponira-yellow transition-colors origin-center" />
+          <motion.span
+            animate={mobileOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
+            className="block w-5 h-px bg-ponira-white/40 group-hover:bg-ponira-yellow transition-colors origin-center"
+          />
+          <motion.span
+            animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }}
+            className="block w-5 h-px bg-ponira-white/40 group-hover:bg-ponira-yellow transition-colors"
+          />
+          <motion.span
+            animate={mobileOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
+            className="block w-5 h-px bg-ponira-white/40 group-hover:bg-ponira-yellow transition-colors origin-center"
+          />
         </button>
       </motion.nav>
 
@@ -113,7 +122,12 @@ export default function Navbar() {
               transition={{ delay: 0.1 }}
               className="mb-12"
             >
-              <img src="/logo-icon.svg" alt="Ponira" className="w-12 h-12 opacity-20" style={{ filter: "brightness(0) invert(1)" }} />
+              <img
+                src="/logo-icon.svg"
+                alt="Ponira"
+                className="w-12 h-12 opacity-20"
+                style={{ filter: "brightness(0) invert(1)" }}
+              />
             </motion.div>
 
             <nav className="flex flex-col items-center gap-10">
@@ -131,7 +145,11 @@ export default function Navbar() {
                 </motion.a>
               ))}
             </nav>
-            <img src="/logo-full.svg" alt="Ponira Lab" className="w-32 mt-12 opacity-10" />
+            <img
+              src="/logo-full.svg"
+              alt="Ponira Lab"
+              className="w-32 mt-12 opacity-10"
+            />
             <p className="absolute bottom-10 text-ponira-white/10 font-body text-[8px] uppercase tracking-[0.3em]">
               Ponira Lab © 2026
             </p>

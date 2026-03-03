@@ -17,9 +17,9 @@ import type { CaseStudy, Lab } from "@/lib/cases";
 
 // Cor de acento por lab — consistente com o resto do site
 const LAB_COLOR: Record<Lab, string> = {
-  studio: "#FBBF24",   // amber-400
+  studio: "#FBBF24", // amber-400
   creative: "#FB7185", // rose-400
-  systems: "#38BDF8",  // sky-400
+  systems: "#38BDF8", // sky-400
 };
 
 interface CaseCoverProps {
@@ -79,8 +79,18 @@ function FallbackCover({
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
-          <pattern id={`grid-${c.slug}`} width="32" height="32" patternUnits="userSpaceOnUse">
-            <path d="M 32 0 L 0 0 0 32" fill="none" stroke="white" strokeWidth="0.5" />
+          <pattern
+            id={`grid-${c.slug}`}
+            width="32"
+            height="32"
+            patternUnits="userSpaceOnUse"
+          >
+            <path
+              d="M 32 0 L 0 0 0 32"
+              fill="none"
+              stroke="white"
+              strokeWidth="0.5"
+            />
           </pattern>
         </defs>
         <rect width="100%" height="100%" fill={`url(#grid-${c.slug})`} />
@@ -89,7 +99,9 @@ function FallbackCover({
       {/* Linha de acento superior */}
       <div
         className="absolute top-0 left-0 right-0 h-px"
-        style={{ background: `linear-gradient(90deg, transparent, ${accentColor}60, transparent)` }}
+        style={{
+          background: `linear-gradient(90deg, transparent, ${accentColor}60, transparent)`,
+        }}
       />
 
       {/* Header */}
@@ -142,7 +154,9 @@ function FallbackCover({
       {/* Linha de acento inferior */}
       <div
         className="absolute bottom-0 left-0 right-0 h-px"
-        style={{ background: `linear-gradient(90deg, ${accentColor}30, transparent)` }}
+        style={{
+          background: `linear-gradient(90deg, ${accentColor}30, transparent)`,
+        }}
       />
     </div>
   );

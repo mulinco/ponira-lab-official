@@ -4,7 +4,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 
-
 export default function Hero() {
   const targetRef = useRef<HTMLDivElement>(null);
 
@@ -13,7 +12,11 @@ export default function Hero() {
     offset: ["start start", "end start"],
   });
 
-  const blurValue = useTransform(scrollYProgress, [0, 0.8], ["blur(0px)", "blur(15px)"]);
+  const blurValue = useTransform(
+    scrollYProgress,
+    [0, 0.8],
+    ["blur(0px)", "blur(15px)"],
+  );
   const opacityValue = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const yValue = useTransform(scrollYProgress, [0, 1], ["0px", "100px"]);
 

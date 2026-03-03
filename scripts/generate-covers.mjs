@@ -52,7 +52,11 @@ const TARGETS = [
     url: "https://lbem-vercel.app",
     type: "vercel",
   },
-  { slug: "landing-page-cjp", url: "https://colegio-joao-pedro.vercel.app/lp", type: "vercel" },
+  {
+    slug: "landing-page-cjp",
+    url: "https://colegio-joao-pedro.vercel.app/lp",
+    type: "vercel",
+  },
 ];
 
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -68,9 +72,11 @@ async function wakeStreamlit(page) {
 
       // Aguarda o botão de wake sumir
       await page.waitForFunction(
-        () => !Array.from(document.querySelectorAll("button"))
-               .some((b) => b.textContent.includes("back up")),
-        { timeout: 60000 }
+        () =>
+          !Array.from(document.querySelectorAll("button")).some((b) =>
+            b.textContent.includes("back up"),
+          ),
+        { timeout: 60000 },
       );
 
       console.log("     ⏳ Aguardando app carregar...");
@@ -105,7 +111,9 @@ async function main() {
     : TARGETS;
 
   if (!targets.length) {
-    console.error(`Slug não encontrado. Opções: ${TARGETS.map((t) => t.slug).join(", ")}`);
+    console.error(
+      `Slug não encontrado. Opções: ${TARGETS.map((t) => t.slug).join(", ")}`,
+    );
     process.exit(1);
   }
 
@@ -155,7 +163,9 @@ async function main() {
   const failed = results.filter((r) => !r.ok);
   if (failed.length) {
     console.log(`\n${failed.length} case(s) falharam. Tente novamente:`);
-    console.log(`  node scripts/generate-covers.mjs ${failed.map((r) => r.slug).join(" ")}`);
+    console.log(
+      `  node scripts/generate-covers.mjs ${failed.map((r) => r.slug).join(" ")}`,
+    );
   } else {
     console.log("\nTodos os covers gerados com sucesso.");
   }

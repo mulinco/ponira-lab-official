@@ -28,7 +28,8 @@ export const cases: CaseStudy[] = [
     subtitle: "Do solo à xícara.",
     category: "Identidade Visual & Branding",
     year: "2023",
-    cover: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f74dec179685751.64fe5843769d5.png",
+    cover:
+      "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f74dec179685751.64fe5843769d5.png",
     images: [
       "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f74dec179685751.64fe5843769d5.png",
       "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/e5ec83179685751.64fe58437781d.png",
@@ -47,7 +48,8 @@ export const cases: CaseStudy[] = [
     result:
       "Uma identidade que vai além da estética: é um manifesto visual de respeito à cadeia do café. A marca comunica origem, cuidado e pertencimento — atributos que constroem fidelidade antes mesmo de a primeira xícara ser servida.",
     tools: ["Adobe Illustrator", "Branding", "Logo Design"],
-    externalUrl: "https://www.behance.net/gallery/179685751/Premier-%28Coffee-Shop%29-Case-de-estudo",
+    externalUrl:
+      "https://www.behance.net/gallery/179685751/Premier-%28Coffee-Shop%29-Case-de-estudo",
     externalLabel: "Ver no Behance",
     featured: true,
   },
@@ -59,7 +61,8 @@ export const cases: CaseStudy[] = [
     subtitle: "Aprender é uma experiência.",
     category: "Identidade Visual",
     year: "2025",
-    cover: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/68d5a3220066835.67bccc0899cac.jpg",
+    cover:
+      "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/68d5a3220066835.67bccc0899cac.jpg",
     images: [
       "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/68d5a3220066835.67bccc0899cac.jpg",
       "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/5bdd49220066835.67bccc0897fc7.jpg",
@@ -74,7 +77,8 @@ export const cases: CaseStudy[] = [
     result:
       "Uma identidade que a escola usa com orgulho — presente em materiais institucionais, comunicação com famílias e presença digital. O projeto estabeleceu as bases visuais que mais tarde guiaram também o desenvolvimento do site institucional.",
     tools: ["Adobe Illustrator", "Brand System", "Logo Design"],
-    externalUrl: "https://www.behance.net/gallery/220066835/Colgio-Joao-Pedro-%28Identidade-Visual%29",
+    externalUrl:
+      "https://www.behance.net/gallery/220066835/Colgio-Joao-Pedro-%28Identidade-Visual%29",
     externalLabel: "Ver no Behance",
     featured: true,
   },
@@ -86,7 +90,8 @@ export const cases: CaseStudy[] = [
     subtitle: "Fotógrafa — A memória como marca.",
     category: "Personal Branding",
     year: "2025",
-    cover: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/479e98236976675.68f7743509965.png",
+    cover:
+      "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/479e98236976675.68f7743509965.png",
     images: [
       "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/479e98236976675.68f7743509965.png",
       "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/0bd1c1236976675.68f774350917d.png",
@@ -100,7 +105,8 @@ export const cases: CaseStudy[] = [
     result:
       "Uma identidade que se diferencia no mercado sem precisar gritar. A marca comunica sensibilidade, intenção e afeto — exatamente o que a fotógrafa entrega em cada ensaio.",
     tools: ["Adobe Illustrator", "Personal Branding", "Visual Identity"],
-    externalUrl: "https://www.behance.net/gallery/236976675/Identidade-Visual-Fotografa",
+    externalUrl:
+      "https://www.behance.net/gallery/236976675/Identidade-Visual-Fotografa",
     externalLabel: "Ver no Behance",
     featured: false,
   },
@@ -112,7 +118,8 @@ export const cases: CaseStudy[] = [
     subtitle: "Autoridade antes da primeira reunião.",
     category: "Personal Branding — Jurídico",
     year: "2023",
-    cover: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/0fa91d162028635.63cf16b2e109c.png",
+    cover:
+      "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/0fa91d162028635.63cf16b2e109c.png",
     images: [
       "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/0fa91d162028635.63cf16b2e109c.png",
     ],
@@ -123,7 +130,8 @@ export const cases: CaseStudy[] = [
     result:
       "Uma identidade pessoal que funciona como um primeiro aperto de mão: firme, elegante e memorável. A marca acompanha a Thais em sua comunicação profissional e reforça o posicionamento premium que ela construiu na carreira.",
     tools: ["Adobe Illustrator", "Personal Branding", "Logo Design"],
-    externalUrl: "https://www.behance.net/gallery/162028635/Thais-Mazeliah-Lawyer",
+    externalUrl:
+      "https://www.behance.net/gallery/162028635/Thais-Mazeliah-Lawyer",
     externalLabel: "Ver no Behance",
     featured: false,
   },
@@ -137,7 +145,8 @@ export const cases: CaseStudy[] = [
     subtitle: "Arquitetura — Espaços que comunicam.",
     category: "Social Media Design",
     year: "2025",
-    cover: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/4c4fb8224700495.680fe53b638e4.png",
+    cover:
+      "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/4c4fb8224700495.680fe53b638e4.png",
     images: [
       "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/4c4fb8224700495.680fe53b638e4.png",
       "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/165167224700495.680fe53b64a95.png",
@@ -150,7 +159,8 @@ export const cases: CaseStudy[] = [
     result:
       "Uma presença digital que faz o escritório ser reconhecido pelo que cria — não apenas pelo que publica. O conteúdo posiciona a marca como referência estética e técnica no nicho de arquitetura.",
     tools: ["Adobe Illustrator", "Social Media", "Content Strategy"],
-    externalUrl: "https://www.behance.net/gallery/224700495/Social-Media-Arquitetura",
+    externalUrl:
+      "https://www.behance.net/gallery/224700495/Social-Media-Arquitetura",
     externalLabel: "Ver no Behance",
     featured: false,
   },
@@ -162,7 +172,8 @@ export const cases: CaseStudy[] = [
     subtitle: "Ana Carolina — A própria marca.",
     category: "Personal Branding",
     year: "2023",
-    cover: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/20aa21180316595.6508e21a621ae.png",
+    cover:
+      "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/20aa21180316595.6508e21a621ae.png",
     images: [
       "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/20aa21180316595.6508e21a621ae.png",
       "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/94778d180316595.6508e21a656cd.png",
@@ -256,7 +267,8 @@ export const cases: CaseStudy[] = [
     subtitle: "Marcas que existem antes das palavras.",
     category: "Logo Design",
     year: "2026",
-    cover: "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/af5b90242555667.696f8e4e0718d.png",
+    cover:
+      "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/af5b90242555667.696f8e4e0718d.png",
     images: [
       "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/af5b90242555667.696f8e4e0718d.png",
       "https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/faaba8242555667.696f8e4e08098.png",
@@ -284,7 +296,8 @@ export const cases: CaseStudy[] = [
     subtitle: "Ilustração e identidade em movimento nas redes.",
     category: "Social Media Design & Ilustração",
     year: "2025",
-    cover: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/552ec1227845527.68483a024d669.png",
+    cover:
+      "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/552ec1227845527.68483a024d669.png",
     images: [
       "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/552ec1227845527.68483a024d669.png",
       "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/3ca30c227845527.68483a024dbb8.png",
@@ -296,7 +309,12 @@ export const cases: CaseStudy[] = [
       "O desafio era equilibrar a personalidade da Fauna com a intenção de cada peça. O processo envolveu ilustração digital com character design, composição que respeita a grade da identidade original, e decisões cromáticas que amplificam sem sobrescrever. Cada post é autoral dentro de um sistema.",
     result:
       "Peças que se integram à identidade da Fauna com naturalidade — como se sempre tivessem pertencido a ela. Um trabalho que demonstra a capacidade de criar dentro de um sistema de outra marca com o mesmo cuidado que se dá à própria.",
-    tools: ["Adobe Illustrator", "Ilustração Digital", "Social Media", "Character Design"],
+    tools: [
+      "Adobe Illustrator",
+      "Ilustração Digital",
+      "Social Media",
+      "Character Design",
+    ],
     externalUrl: "https://www.behance.net/gallery/227845527/Design-de-Post",
     externalLabel: "Ver no Behance",
     featured: false,
@@ -309,7 +327,8 @@ export const cases: CaseStudy[] = [
     subtitle: "Conteúdo educativo que não parece obrigação.",
     category: "Social Media Design",
     year: "2024",
-    cover: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/7a8a32195804827.6615498f21000.png",
+    cover:
+      "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/7a8a32195804827.6615498f21000.png",
     images: [
       "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/7a8a32195804827.6615498f21000.png",
     ],
@@ -320,7 +339,8 @@ export const cases: CaseStudy[] = [
     result:
       "Posts que param o scroll e entregam o conteúdo com clareza. Uma identidade visual que posiciona a Wiki Escolar como referência no nicho educacional — séria sem ser sisuda, acessível sem ser simplória.",
     tools: ["Adobe Illustrator", "Social Media", "Graphic Design"],
-    externalUrl: "https://www.behance.net/gallery/195804827/Social-Media-%28Post%29-Wiki-Escolar",
+    externalUrl:
+      "https://www.behance.net/gallery/195804827/Social-Media-%28Post%29-Wiki-Escolar",
     externalLabel: "Ver no Behance",
     featured: false,
   },
@@ -396,11 +416,14 @@ export const cases: CaseStudy[] = [
     year: "2024",
     cover: "/covers/landing-page-cjp.png",
     images: ["/covers/landing-page-cjp.png"],
-    context: "O Colégio João Pedro chegou em 2025 com um desafio específico: abrir matrículas para 2026 num ciclo onde a decisão de família começa cedo e o digital é o primeiro contato. A escola tinha metodologia sólida — sociointeracionismo, cultura maker, bilinguismo real — mas precisava de uma página que convertesse essa proposta em confiança antes mesmo da visita presencial.",
+    context:
+      "O Colégio João Pedro chegou em 2025 com um desafio específico: abrir matrículas para 2026 num ciclo onde a decisão de família começa cedo e o digital é o primeiro contato. A escola tinha metodologia sólida — sociointeracionismo, cultura maker, bilinguismo real — mas precisava de uma página que convertesse essa proposta em confiança antes mesmo da visita presencial.",
 
-    process: "A landing page foi construída para guiar uma decisão emocional com lógica clara. Cada seção responde a uma objeção silenciosa de quem está escolhendo onde colocar o filho: segurança do ambiente, transparência pedagógica, infraestrutura, história da escola. O formulário de captação foi simplificado ao máximo — nome, WhatsApp e série de interesse — para reduzir fricção no momento mais crítico do funil. O design seguiu o sistema visual já criado pela Carol, garantindo que LP e identidade da escola falassem a mesma língua.",
+    process:
+      "A landing page foi construída para guiar uma decisão emocional com lógica clara. Cada seção responde a uma objeção silenciosa de quem está escolhendo onde colocar o filho: segurança do ambiente, transparência pedagógica, infraestrutura, história da escola. O formulário de captação foi simplificado ao máximo — nome, WhatsApp e série de interesse — para reduzir fricção no momento mais crítico do funil. O design seguiu o sistema visual já criado pela Carol, garantindo que LP e identidade da escola falassem a mesma língua.",
 
-    result: "Uma página de captação que transforma a curiosidade de um pai ou mãe em agendamento de visita. Construída em Next.js e hospedada na Vercel, carrega em menos de 2 segundos em mobile — onde a maior parte das pesquisas por escola acontece. A LP ficou ativa para o ciclo de matrículas 2026 e representa a primeira entrega onde identidade visual, site institucional e estratégia de conversão foram pensados juntos pela mesma agência.",
+    result:
+      "Uma página de captação que transforma a curiosidade de um pai ou mãe em agendamento de visita. Construída em Next.js e hospedada na Vercel, carrega em menos de 2 segundos em mobile — onde a maior parte das pesquisas por escola acontece. A LP ficou ativa para o ciclo de matrículas 2026 e representa a primeira entrega onde identidade visual, site institucional e estratégia de conversão foram pensados juntos pela mesma agência.",
     tools: ["Next.js", "React", "Vercel"],
     externalUrl: "https://colegio-joao-pedro.vercel.app/lp",
     externalLabel: "Ver Projeto",

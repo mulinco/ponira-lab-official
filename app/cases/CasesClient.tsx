@@ -24,7 +24,9 @@ export default function CasesClient() {
   // Lê o filtro da URL — fallback para "all" se ausente ou inválido
   const labParam = searchParams.get("lab");
   const validLabs: (Lab | "all")[] = ["all", "studio", "creative", "systems"];
-  const active = validLabs.includes(labParam as Lab) ? (labParam as Lab | "all") : "all";
+  const active = validLabs.includes(labParam as Lab)
+    ? (labParam as Lab | "all")
+    : "all";
 
   // Atualiza a URL ao trocar filtro, sem rolar a página
   const setFilter = useCallback(
@@ -37,10 +39,11 @@ export default function CasesClient() {
       }
       router.replace(`/cases?${params.toString()}`, { scroll: false });
     },
-    [router, searchParams]
+    [router, searchParams],
   );
 
-  const filtered = active === "all" ? cases : cases.filter((c) => c.lab === active);
+  const filtered =
+    active === "all" ? cases : cases.filter((c) => c.lab === active);
 
   return (
     <main className="relative min-h-screen bg-ponira-brown overflow-x-hidden">
@@ -67,7 +70,8 @@ export default function CasesClient() {
               Projetos que provam o que prometemos.
             </h1>
             <p className="text-ponira-white/50 font-body font-light text-lg max-w-xl leading-relaxed">
-              Cada entrega tem um contexto, um processo e um resultado. Aqui estão as histórias por trás do trabalho.
+              Cada entrega tem um contexto, um processo e um resultado. Aqui
+              estão as histórias por trás do trabalho.
             </p>
           </motion.div>
         </section>
@@ -93,7 +97,10 @@ export default function CasesClient() {
 
         {/* ── GRID ── */}
         <section className="py-20 px-6 max-w-7xl mx-auto">
-          <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20">
+          <motion.div
+            layout
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20"
+          >
             <AnimatePresence mode="popLayout">
               {filtered.map((c, i) => (
                 <motion.div

@@ -6,12 +6,12 @@ const BASE = "https://poniralab.com";
 
 const navLinks = [
   { name: "Manifesto", href: `${BASE}/#manifesto` },
-  { name: "Labs",      href: `${BASE}/#labs` },
+  { name: "Labs", href: `${BASE}/#labs` },
   { name: "Artefatos", href: `${BASE}/#showcase` },
-  { name: "Pacotes",   href: `${BASE}/#pacotes` },
-  { name: "Cases",     href: `${BASE}/cases` },
-  { name: "Contato",   href: `${BASE}/contato` },
-  { name: "Sócias",    href: `${BASE}/#founders` },
+  { name: "Pacotes", href: `${BASE}/#pacotes` },
+  { name: "Cases", href: `${BASE}/cases` },
+  { name: "Contato", href: `${BASE}/contato` },
+  { name: "Sócias", href: `${BASE}/#founders` },
 ];
 
 export default function NavbarLab() {
@@ -124,7 +124,11 @@ export default function NavbarLab() {
               ))}
             </nav>
 
-            <img src="/logo-full.svg" alt="Ponira Lab" className="w-32 mt-12 opacity-10" />
+            <img
+              src="/logo-full.svg"
+              alt="Ponira Lab"
+              className="w-32 mt-12 opacity-10"
+            />
 
             <p className="absolute bottom-10 text-ponira-white/10 font-body text-[8px] uppercase tracking-[0.3em]">
               Ponira Lab © 2026

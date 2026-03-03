@@ -52,15 +52,26 @@ const packages = [
 ];
 
 const labLinks = [
-  { name: "Studio", href: "https://studio.poniralab.com", color: "text-amber-400/60 hover:text-amber-400" },
-  { name: "Creative", href: "https://creative.poniralab.com", color: "text-rose-400/60 hover:text-rose-400" },
-  { name: "Systems", href: "https://systems.poniralab.com", color: "text-sky-400/60 hover:text-sky-400" },
+  {
+    name: "Studio",
+    href: "https://studio.poniralab.com",
+    color: "text-amber-400/60 hover:text-amber-400",
+  },
+  {
+    name: "Creative",
+    href: "https://creative.poniralab.com",
+    color: "text-rose-400/60 hover:text-rose-400",
+  },
+  {
+    name: "Systems",
+    href: "https://systems.poniralab.com",
+    color: "text-sky-400/60 hover:text-sky-400",
+  },
 ];
 
 export default function CrossLab() {
   return (
     <section id="pacotes" className="py-32 px-6 max-w-7xl mx-auto">
-
       {/* Header */}
       <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-6">
         <div className="max-w-xl">
@@ -107,7 +118,10 @@ export default function CrossLab() {
                   key={lab}
                   className={`text-[9px] font-body font-black uppercase tracking-widest ${pkg.labColors[j]}`}
                 >
-                  {lab}{j < pkg.labs.length - 1 && <span className="text-ponira-white/20 ml-2">+</span>}
+                  {lab}
+                  {j < pkg.labs.length - 1 && (
+                    <span className="text-ponira-white/20 ml-2">+</span>
+                  )}
                 </span>
               ))}
             </div>
@@ -180,7 +194,6 @@ export default function CrossLab() {
           ))}
         </div>
       </motion.div>
-
     </section>
   );
 }

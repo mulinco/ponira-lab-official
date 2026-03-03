@@ -19,8 +19,10 @@ export default function ViewportBlur() {
           height: "20vh",
           backdropFilter: "blur(10px)",
           WebkitBackdropFilter: "blur(10px)",
-          maskImage: "linear-gradient(to top, black 0%, black 25%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to top, black 0%, black 25%, transparent 100%)",
+          maskImage:
+            "linear-gradient(to top, black 0%, black 25%, transparent 100%)",
+          WebkitMaskImage:
+            "linear-gradient(to top, black 0%, black 25%, transparent 100%)",
         }}
       />
     </>
