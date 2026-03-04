@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import CasesClient from "./CasesClient";
+import { Component } from "@/components/argent-loop-infinite-slider";
 
 export const metadata: Metadata = {
   title: "Cases",
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
 export default function CasesPage() {
   return (
     <Suspense>
-      <CasesClient />
+      <Component />
     </Suspense>
   );
 }

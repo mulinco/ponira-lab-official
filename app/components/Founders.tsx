@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import ShapeBlur from "@/components/ShapeBlur";
 
 export default function Founders() {
   return (
@@ -24,12 +25,25 @@ export default function Founders() {
           viewport={{ once: true }}
           className="space-y-8"
         >
-          <div className="aspect-[4/5] bg-black/20 rounded-sm border border-ponira-white/5 grayscale hover:grayscale-0 transition-all duration-700">
+          <div className="aspect-[4/5] relative bg-black/20 rounded-tr-[80px] rounded-bl-[80px] overflow-hidden border border-ponira-white/5 grayscale hover:grayscale-0 transition-all duration-700">
+            {/* ShapeBlur fundo */}
+            <div className="absolute inset-0 pointer-events-none">
+              <ShapeBlur
+                variation={0}
+                pixelRatioProp={typeof window !== "undefined" ? window.devicePixelRatio : 1}
+                shapeSize={0.8}
+                roundness={0.5}
+                borderSize={0.05}
+                circleSize={0.25}
+                circleEdge={1}
+              />
+            </div>
             <Image
               src="/carol-ponira.jpg"
               alt="Ana Carolina"
               width={600}
               height={900}
+              className="relative z-10 w-full h-full object-cover"
             />
           </div>
           <div>
@@ -55,12 +69,25 @@ export default function Founders() {
           viewport={{ once: true }}
           className="space-y-8 md:mt-24"
         >
-          <div className="aspect-[4/5] bg-black/20 rounded-sm border border-ponira-white/5 grayscale hover:grayscale-0 transition-all duration-700">
+          <div className="aspect-[4/5] relative bg-black/20 rounded-tr-[80px] rounded-bl-[80px] overflow-hidden border border-ponira-white/5 grayscale hover:grayscale-0 transition-all duration-700">
+            {/* ShapeBlur fundo */}
+            <div className="absolute inset-0 pointer-events-none">
+              <ShapeBlur
+                variation={0}
+                pixelRatioProp={typeof window !== "undefined" ? window.devicePixelRatio : 1}
+                shapeSize={0.8}
+                roundness={0.5}
+                borderSize={0.05}
+                circleSize={0.25}
+                circleEdge={1}
+              />
+            </div>
             <Image
               src="/maria-ponira.jpg"
               alt="Maria Clara"
               width={600}
               height={900}
+              className="relative z-10 w-full h-full object-cover"
             />
           </div>
           <div>

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+
 const packages = [
   {
     name: "Presença Essencial",
@@ -96,76 +97,81 @@ export default function CrossLab() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: i * 0.1 }}
             viewport={{ once: true }}
-            className={`relative flex flex-col p-8 rounded-sm border transition-colors duration-300 ${
+            className={`relative flex flex-col rounded-tr-[80px] rounded-bl-[80px] overflow-hidden border transition-colors duration-300 ${
               pkg.highlight
                 ? "border-ponira-yellow/30 bg-ponira-yellow/5"
                 : "border-ponira-white/5 bg-black/10 hover:border-ponira-white/10"
             }`}
+            style={{ padding: "32px 56px 56px 32px" }}
           >
-            {/* Badge destaque */}
-            {pkg.highlight && (
-              <div className="absolute -top-3 left-8">
-                <span className="text-[9px] font-body font-black uppercase tracking-widest px-3 py-1 bg-ponira-yellow text-ponira-brown rounded-full">
-                  Mais escolhido
-                </span>
-              </div>
-            )}
 
-            {/* Labs */}
-            <div className="flex gap-2 mb-6 flex-wrap">
-              {pkg.labs.map((lab, j) => (
-                <span
-                  key={lab}
-                  className={`text-[9px] font-body font-black uppercase tracking-widest ${pkg.labColors[j]}`}
-                >
-                  {lab}
-                  {j < pkg.labs.length - 1 && (
-                    <span className="text-ponira-white/20 ml-2">+</span>
-                  )}
-                </span>
-              ))}
-            </div>
-
-            {/* Nome e tagline */}
-            <h3 className="text-xl font-display italic text-ponira-white tracking-normal mb-2">
-              {pkg.name}
-            </h3>
-            <p className="text-ponira-white/40 font-body font-light text-sm tracking-normal leading-relaxed mb-8">
-              {pkg.tagline}
-            </p>
-
-            {/* Includes */}
-            <ul className="space-y-3 mb-10 flex-1">
-              {pkg.includes.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span className="text-ponira-yellow mt-0.5 text-xs">✦</span>
-                  <span className="text-ponira-white/60 font-body font-light text-sm leading-relaxed">
-                    {item}
+            {/* Conteúdo */}
+            <div className="relative z-10 flex flex-col h-full">
+              {/* Badge destaque */}
+              {pkg.highlight && (
+                <div className="absolute right-0 top-0 -translate-y-1/2 translate-x-1/2 z-10">
+                  <span className="text-[9px] font-body font-black uppercase tracking-widest px-3 py-1 bg-ponira-yellow text-ponira-brown rounded-full">
+                    +escolhido
                   </span>
-                </li>
-              ))}
-            </ul>
+                </div>
+              )}
 
-            {/* Preço + CTA */}
-            <div className="border-t border-ponira-white/5 pt-6 flex flex-col gap-4">
-              <div>
-                <span className="text-ponira-white/20 font-body text-[9px] uppercase tracking-widest block mb-1">
-                  A partir de
-                </span>
-                <span className="text-2xl font-display text-ponira-white">
-                  {pkg.price}
-                </span>
+              {/* Labs */}
+              <div className="flex gap-2 mb-6 flex-wrap">
+                {pkg.labs.map((lab, j) => (
+                  <span
+                    key={lab}
+                    className={`text-[9px] font-body font-black uppercase tracking-widest ${pkg.labColors[j]}`}
+                  >
+                    {lab}
+                    {j < pkg.labs.length - 1 && (
+                      <span className="text-ponira-white/20 ml-2">+</span>
+                    )}
+                  </span>
+                ))}
               </div>
-              <Link
-                href={pkg.cta}
-                className={`text-center py-3 rounded-full font-body text-[10px] uppercase tracking-widest transition-all duration-300 ${
-                  pkg.highlight
-                    ? "bg-ponira-yellow text-ponira-brown hover:scale-[1.02]"
-                    : "border border-ponira-white/10 text-ponira-white/50 hover:border-ponira-yellow/30 hover:text-ponira-yellow"
-                }`}
-              >
-                Solicitar orçamento
-              </Link>
+
+              {/* Nome e tagline */}
+              <h3 className="text-xl font-display italic text-ponira-white tracking-normal mb-2">
+                {pkg.name}
+              </h3>
+              <p className="text-ponira-white/40 font-body font-light text-sm tracking-normal leading-relaxed mb-8">
+                {pkg.tagline}
+              </p>
+
+              {/* Includes */}
+              <ul className="space-y-3 mb-10 flex-1">
+                {pkg.includes.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="text-ponira-yellow mt-0.5 text-xs">✦</span>
+                    <span className="text-ponira-white/60 font-body font-light text-sm leading-relaxed">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Preço + CTA */}
+              <div className="border-t border-ponira-white/5 pt-6 flex flex-col gap-4">
+                <div>
+                  <span className="text-ponira-white/20 font-body text-[9px] uppercase tracking-widest block mb-1">
+                    A partir de
+                  </span>
+                  <span className="text-2xl font-display text-ponira-white">
+                    {pkg.price}
+                  </span>
+                </div>
+                <Link
+                  href={pkg.cta}
+                  className={`text-center py-3 rounded-full font-body text-[10px] uppercase tracking-widest transition-all duration-300 ${
+                    pkg.highlight
+                      ? "bg-ponira-yellow text-ponira-brown hover:scale-[1.02]"
+                      : "border border-ponira-white/10 text-ponira-white/50 hover:border-ponira-yellow/30 hover:text-ponira-yellow"
+                  }`}
+                >
+                  Solicitar orçamento
+                </Link>
+              </div>
             </div>
           </motion.div>
         ))}

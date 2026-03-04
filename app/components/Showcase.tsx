@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import ShapeBlur from "@/components/ShapeBlur";
 import { cases, labMeta } from "@/lib/cases";
 
 const featured = cases.filter((c) => c.featured);
@@ -39,23 +40,36 @@ export default function Showcase() {
           >
             <Link href={`/cases/${project.slug}`} className="block">
               {/* Cover */}
-              <div className="aspect-video mb-8 overflow-hidden rounded-sm border border-ponira-white/5 relative bg-black/20">
+              <div className="aspect-video mb-8 overflow-hidden rounded-tr-[80px] rounded-bl-[80px] border border-ponira-white/5 relative bg-black/20">
+                {/* ShapeBlur fundo */}
+                <div className="absolute inset-0 pointer-events-none">
+                  <ShapeBlur
+                    variation={0}
+                    pixelRatioProp={typeof window !== "undefined" ? window.devicePixelRatio : 1}
+                    shapeSize={0.8}
+                    roundness={0.5}
+                    borderSize={0.05}
+                    circleSize={0.25}
+                    circleEdge={1}
+                  />
+                </div>
+
                 {project.cover ? (
                   <img
                     src={project.cover}
                     alt={project.title}
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    className="relative z-10 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                   />
                 ) : (
-                  <div className="absolute inset-0 bg-gradient-to-tr from-ponira-brown/60 to-transparent" />
+                  <div className="absolute inset-0 z-10 bg-gradient-to-tr from-ponira-brown/60 to-transparent" />
                 )}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-500 flex items-center justify-center">
+                <div className="absolute inset-0 z-20 bg-black/0 group-hover:bg-black/50 transition-colors duration-500 flex items-center justify-center">
                   <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-ponira-yellow font-body text-xs uppercase tracking-widest border border-ponira-yellow/40 px-4 py-2 rounded-full backdrop-blur-sm bg-black/30">
                     Ver Case ↗
                   </span>
                 </div>
                 {/* Lab badge */}
-                <div className="absolute top-4 left-4">
+                <div className="absolute top-4 left-4 z-30">
                   <span className="text-[8px] font-body font-black uppercase tracking-widest px-2 py-1 rounded-full bg-black/40 backdrop-blur-sm text-ponira-yellow border border-ponira-yellow/20">
                     {labMeta[project.lab].label}
                   </span>
