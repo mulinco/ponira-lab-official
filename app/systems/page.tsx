@@ -63,7 +63,10 @@ const addons = [
   { name: "Formulário com notificação automática", price: "+ R$ 200" },
   { name: "Webhook / integração com API externa", price: "+ R$ 600" },
   { name: "Painel de dados (dashboard interativo)", price: "+ R$ 800" },
-  { name: "Manutenção mensal e suporte técnico", price: "a partir de R$ 300/mês" },
+  {
+    name: "Manutenção mensal e suporte técnico",
+    price: "a partir de R$ 300/mês",
+  },
 ];
 
 const tools = [
@@ -133,7 +136,9 @@ export default function SystemsPage() {
               <span className="text-sky-400 font-body text-[9px] uppercase tracking-[0.5em] font-black">
                 Ponira Lab
               </span>
-              <span className="text-ponira-white/20 font-body text-[9px]">✦</span>
+              <span className="text-ponira-white/20 font-body text-[9px]">
+                ✦
+              </span>
               <span className="text-sky-400/60 font-body text-[9px] uppercase tracking-[0.5em] font-black">
                 Systems
               </span>
@@ -147,7 +152,12 @@ export default function SystemsPage() {
               com intenção.
             </p>
             <div className="flex flex-wrap gap-3">
-              <LogoLoop items={tools} speed={25} accentColor="#38BDF8" className="mt-10" />
+              <LogoLoop
+                items={tools}
+                speed={25}
+                accentColor="#38BDF8"
+                className="mt-10"
+              />
             </div>
           </motion.div>
         </section>
@@ -181,7 +191,9 @@ export default function SystemsPage() {
                 <CardContainer containerClassName="w-full" className="w-full">
                   <CardBody className="p-8 border border-ponira-white/5 bg-black/10 rounded-tr-[80px] rounded-bl-[80px] hover:border-sky-400/20 transition-colors duration-300 h-full">
                     <CardItem translateZ="20" className="mb-4">
-                      <span className="text-sky-400/40 text-2xl block">{cap.icon}</span>
+                      <span className="text-sky-400/40 text-2xl block">
+                        {cap.icon}
+                      </span>
                     </CardItem>
                     <CardItem translateZ="40">
                       <h3 className="text-lg font-display italic text-ponira-white mb-3">
@@ -236,7 +248,6 @@ export default function SystemsPage() {
                 <CardContainer containerClassName="w-full" className="w-full">
                   <CardBody className="w-full">
                     <Link href={`/cases/${c.slug}`} className="block">
-
                       {/* Cover */}
                       <CardItem translateZ="50" className="w-full">
                         <div className="aspect-video mb-6 overflow-hidden rounded-tr-[80px] rounded-bl-[80px] border border-ponira-white/5 relative bg-black/20">
@@ -248,7 +259,9 @@ export default function SystemsPage() {
                             />
                           ) : (
                             <div className="absolute inset-0 bg-gradient-to-tr from-sky-900/40 to-transparent flex items-center justify-center">
-                              <span className="text-sky-400/20 font-display text-6xl italic">✦</span>
+                              <span className="text-sky-400/20 font-display text-6xl italic">
+                                ✦
+                              </span>
                             </div>
                           )}
                           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-500 flex items-center justify-center">
@@ -294,7 +307,6 @@ export default function SystemsPage() {
                           ))}
                         </div>
                       </CardItem>
-
                     </Link>
                   </CardBody>
                 </CardContainer>
@@ -363,7 +375,9 @@ export default function SystemsPage() {
                       <ul className="space-y-3">
                         {svc.includes.map((item) => (
                           <li key={item} className="flex items-start gap-3">
-                            <span className="text-sky-400 mt-0.5 text-xs">✦</span>
+                            <span className="text-sky-400 mt-0.5 text-xs">
+                              ✦
+                            </span>
                             <span className="text-ponira-white/60 font-body font-light text-sm leading-relaxed">
                               {item}
                             </span>
@@ -373,7 +387,10 @@ export default function SystemsPage() {
                     </CardItem>
 
                     {/* Preço + CTA */}
-                    <CardItem translateZ="60" className="border-t border-ponira-white/5 pt-6 flex flex-col gap-4">
+                    <CardItem
+                      translateZ="60"
+                      className="border-t border-ponira-white/5 pt-6 flex flex-col gap-4"
+                    >
                       <div>
                         <span className="text-ponira-white/20 font-body text-[9px] uppercase tracking-widest block mb-1">
                           A partir de
@@ -450,7 +467,9 @@ export default function SystemsPage() {
               </p>
             </div>
             <div className="flex flex-col items-center gap-3 shrink-0">
-              <span className="text-sky-400/40 font-display text-6xl italic">✦</span>
+              <span className="text-sky-400/40 font-display text-6xl italic">
+                ✦
+              </span>
               <span className="text-ponira-white/20 font-body text-[10px] uppercase tracking-widest">
                 Em breve
               </span>

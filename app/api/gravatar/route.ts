@@ -9,7 +9,10 @@ export async function GET(req: NextRequest) {
 
   const apiKey = process.env.GRAVATAR_API_KEY;
   if (!apiKey) {
-    return NextResponse.json({ error: "API key não configurada." }, { status: 500 });
+    return NextResponse.json(
+      { error: "API key não configurada." },
+      { status: 500 },
+    );
   }
 
   try {

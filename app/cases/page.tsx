@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import CasesClient from "./CasesClient";
 
-
 export const metadata: Metadata = {
   title: "Cases",
   description:

@@ -23,7 +23,9 @@ async function fetchGravatarProfile(
   const apiKey = process.env.GRAVATAR_API_KEY;
   if (!apiKey) return null;
 
-  const hash = createHash("sha256").update(email.trim().toLowerCase()).digest("hex");
+  const hash = createHash("sha256")
+    .update(email.trim().toLowerCase())
+    .digest("hex");
 
   try {
     const res = await fetch(`https://api.gravatar.com/v3/profiles/${hash}`, {
@@ -135,27 +137,34 @@ function internalEmailHtml({
             </td>
             <td style="vertical-align:top;">
               ${gravatar.display_name ? `<p style="margin:0 0 4px;font-family:Georgia,serif;font-size:16px;font-style:italic;color:#F5F5F5;">${gravatar.display_name}</p>` : ""}
-              ${gravatar.job_title || gravatar.company
-                ? `<p style="margin:0 0 4px;font-family:Arial,sans-serif;font-size:11px;font-weight:300;color:rgba(245,245,245,0.4);">
+              ${
+                gravatar.job_title || gravatar.company
+                  ? `<p style="margin:0 0 4px;font-family:Arial,sans-serif;font-size:11px;font-weight:300;color:rgba(245,245,245,0.4);">
                     ${[gravatar.job_title, gravatar.company].filter(Boolean).join(" · ")}
                    </p>`
-                : ""}
-              ${gravatar.location
-                ? `<p style="margin:0 0 8px;font-family:Arial,sans-serif;font-size:10px;color:rgba(245,245,245,0.25);">
+                  : ""
+              }
+              ${
+                gravatar.location
+                  ? `<p style="margin:0 0 8px;font-family:Arial,sans-serif;font-size:10px;color:rgba(245,245,245,0.25);">
                     📍 ${gravatar.location}
                    </p>`
-                : ""}
-              ${gravatar.description
-                ? `<p style="margin:0;font-family:Arial,sans-serif;font-size:12px;font-weight:300;color:rgba(245,245,245,0.4);line-height:1.6;max-width:320px;">
+                  : ""
+              }
+              ${
+                gravatar.description
+                  ? `<p style="margin:0;font-family:Arial,sans-serif;font-size:12px;font-weight:300;color:rgba(245,245,245,0.4);line-height:1.6;max-width:320px;">
                     ${gravatar.description}
                    </p>`
-                : ""}
+                  : ""
+              }
             </td>
           </tr>
         </table>
 
-        ${gravatar.verified_accounts && gravatar.verified_accounts.length > 0
-          ? `<div style="margin-top:16px;">
+        ${
+          gravatar.verified_accounts && gravatar.verified_accounts.length > 0
+            ? `<div style="margin-top:16px;">
                ${gravatar.verified_accounts
                  .map(
                    (acc) =>
@@ -166,7 +175,8 @@ function internalEmailHtml({
                  )
                  .join("")}
              </div>`
-          : ""}
+            : ""
+        }
       </td>
     </tr>`
     : "";

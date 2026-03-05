@@ -62,11 +62,20 @@ const services = [
 ];
 
 const addons = [
-  { name: "Identidade visual para redes (kit de templates)", price: "+ R$ 500" },
+  {
+    name: "Identidade visual para redes (kit de templates)",
+    price: "+ R$ 500",
+  },
   { name: "Roteiro e direção de vídeo (reels/tiktok)", price: "+ R$ 400/mês" },
   { name: "Gestão de comentários e DMs", price: "+ R$ 300/mês" },
-  { name: "Campanha pontual (lançamento, data especial)", price: "a partir de R$ 400" },
-  { name: "Identidade visual para stories (destaques + highlights)", price: "+ R$ 250" },
+  {
+    name: "Campanha pontual (lançamento, data especial)",
+    price: "a partir de R$ 400",
+  },
+  {
+    name: "Identidade visual para stories (destaques + highlights)",
+    price: "+ R$ 250",
+  },
 ];
 
 const tools = [
@@ -117,7 +126,9 @@ export default function CreativePage() {
               <span className="text-rose-400 font-body text-[9px] uppercase tracking-[0.5em] font-black">
                 Ponira Lab
               </span>
-              <span className="text-ponira-white/20 font-body text-[9px]">✦</span>
+              <span className="text-ponira-white/20 font-body text-[9px]">
+                ✦
+              </span>
               <span className="text-rose-400/60 font-body text-[9px] uppercase tracking-[0.5em] font-black">
                 Creative
               </span>
@@ -130,7 +141,12 @@ export default function CreativePage() {
               intenção e constrói presença real nas redes.
             </p>
             <div className="flex flex-wrap gap-3">
-              <LogoLoop items={tools} speed={25} accentColor="#FB7185" className="mt-10" />
+              <LogoLoop
+                items={tools}
+                speed={25}
+                accentColor="#FB7185"
+                className="mt-10"
+              />
             </div>
           </motion.div>
         </section>
@@ -204,7 +220,6 @@ export default function CreativePage() {
                 <CardContainer containerClassName="w-full" className="w-full">
                   <CardBody className="w-full">
                     <Link href={`/cases/${c.slug}`} className="block">
-
                       {/* Cover */}
                       <CardItem translateZ="50" className="w-full">
                         <div className="aspect-video mb-6 overflow-hidden rounded-tr-[80px] rounded-bl-[80px] border border-ponira-white/5 relative bg-black/20">
@@ -216,7 +231,9 @@ export default function CreativePage() {
                             />
                           ) : (
                             <div className="absolute inset-0 bg-gradient-to-tr from-rose-900/40 to-transparent flex items-center justify-center">
-                              <span className="text-rose-400/20 font-display text-6xl italic">✦</span>
+                              <span className="text-rose-400/20 font-display text-6xl italic">
+                                ✦
+                              </span>
                             </div>
                           )}
                           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-500 flex items-center justify-center">
@@ -239,7 +256,6 @@ export default function CreativePage() {
                           {c.subtitle}
                         </p>
                       </CardItem>
-
                     </Link>
                   </CardBody>
                 </CardContainer>
@@ -308,7 +324,9 @@ export default function CreativePage() {
                       <ul className="space-y-3">
                         {svc.includes.map((item) => (
                           <li key={item} className="flex items-start gap-3">
-                            <span className="text-rose-400 mt-0.5 text-xs">✦</span>
+                            <span className="text-rose-400 mt-0.5 text-xs">
+                              ✦
+                            </span>
                             <span className="text-ponira-white/60 font-body font-light text-sm leading-relaxed">
                               {item}
                             </span>
@@ -318,7 +336,10 @@ export default function CreativePage() {
                     </CardItem>
 
                     {/* Preço + CTA */}
-                    <CardItem translateZ="60" className="border-t border-ponira-white/5 pt-6 flex flex-col gap-4">
+                    <CardItem
+                      translateZ="60"
+                      className="border-t border-ponira-white/5 pt-6 flex flex-col gap-4"
+                    >
                       <div>
                         <span className="text-ponira-white/20 font-body text-[9px] uppercase tracking-widest block mb-1">
                           A partir de
@@ -400,7 +421,9 @@ export default function CreativePage() {
               </p>
             </div>
             <div className="flex flex-col items-center gap-3 shrink-0">
-              <span className="text-rose-400/40 font-display text-6xl italic">✦</span>
+              <span className="text-rose-400/40 font-display text-6xl italic">
+                ✦
+              </span>
               <span className="text-ponira-white/20 font-body text-[10px] uppercase tracking-widest">
                 Em breve
               </span>

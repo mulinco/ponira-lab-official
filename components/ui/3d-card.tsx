@@ -61,10 +61,7 @@ export function CardContainer({
   return (
     <MouseEnterContext.Provider value={{ isMouseEntered, setIsMouseEntered }}>
       {/* Wrapper externo: só define perspective */}
-      <div
-        className={containerClassName}
-        style={{ perspective: "1000px" }}
-      >
+      <div className={containerClassName} style={{ perspective: "1000px" }}>
         {/* Elemento que recebe o tilt */}
         <div
           ref={containerRef}

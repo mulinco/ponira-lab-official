@@ -14,7 +14,7 @@ import ViewportBlur from "./components/ViewportBlur";
 export default function Home() {
   return (
     <main className="relative min-h-screen bg-ponira-brown overflow-x-hidden">
-      <div className="fixed inset-0 z-0">
+      <div className="fixed inset-0 z-0 bg-ponira-brown">
         <Grainient color1="#5a5539" color2="#3b2e0f" color3="#9b682a" />
       </div>
 

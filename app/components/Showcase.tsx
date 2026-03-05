@@ -42,7 +42,6 @@ export default function Showcase() {
             <CardContainer containerClassName="w-full" className="w-full">
               <CardBody className="w-full">
                 <Link href={`/cases/${project.slug}`} className="block">
-
                   {/* Cover */}
                   <CardItem translateZ="50" className="w-full">
                     <div className="aspect-video mb-8 overflow-hidden rounded-tr-[80px] rounded-bl-[80px] border border-ponira-white/5 relative bg-black/20">
@@ -50,7 +49,11 @@ export default function Showcase() {
                       <div className="absolute inset-0 pointer-events-none">
                         <ShapeBlur
                           variation={0}
-                          pixelRatioProp={typeof window !== "undefined" ? window.devicePixelRatio : 1}
+                          pixelRatioProp={
+                            typeof window !== "undefined"
+                              ? window.devicePixelRatio
+                              : 1
+                          }
                           shapeSize={0.8}
                           roundness={0.5}
                           borderSize={0.05}
@@ -76,7 +79,10 @@ export default function Showcase() {
                       </div>
 
                       {/* Lab badge — flutua acima da imagem */}
-                      <CardItem translateZ="80" className="absolute top-4 left-4 z-30">
+                      <CardItem
+                        translateZ="80"
+                        className="absolute top-4 left-4 z-30"
+                      >
                         <span className="text-[8px] font-body font-black uppercase tracking-widest px-2 py-1 rounded-full bg-black/40 backdrop-blur-sm text-ponira-yellow border border-ponira-yellow/20">
                           {labMeta[project.lab].label}
                         </span>
@@ -101,7 +107,6 @@ export default function Showcase() {
                       </span>
                     </div>
                   </CardItem>
-
                 </Link>
               </CardBody>
             </CardContainer>

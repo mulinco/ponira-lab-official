@@ -1,5 +1,10 @@
 "use client";
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useMotionValueEvent,
+} from "framer-motion";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -106,7 +111,9 @@ export default function Navbar() {
               aria-label="Menu"
             >
               <motion.span
-                animate={mobileOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
+                animate={
+                  mobileOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }
+                }
                 className="block w-5 h-px bg-ponira-white/40 group-hover:bg-ponira-yellow transition-colors origin-center"
               />
               <motion.span
@@ -114,7 +121,9 @@ export default function Navbar() {
                 className="block w-5 h-px bg-ponira-white/40 group-hover:bg-ponira-yellow transition-colors"
               />
               <motion.span
-                animate={mobileOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
+                animate={
+                  mobileOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }
+                }
                 className="block w-5 h-px bg-ponira-white/40 group-hover:bg-ponira-yellow transition-colors origin-center"
               />
             </button>
@@ -151,7 +160,10 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   className="text-ponira-white/20 hover:text-ponira-yellow transition-all duration-300 font-mono text-[7px] uppercase tracking-widest"
-                  style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+                  style={{
+                    writingMode: "vertical-rl",
+                    transform: "rotate(180deg)",
+                  }}
                 >
                   {link.name}
                 </a>

@@ -90,10 +90,15 @@ export default function CaseClient({ params }: Props) {
                         src={c.cover}
                         alt={c.title}
                         className="w-full h-full object-cover"
-                        style={{ objectPosition: centerCrop ? "center" : "top center" }}
+                        style={{
+                          objectPosition: centerCrop ? "center" : "top center",
+                        }}
                       />
                       {/* Lab badge flutuante */}
-                      <CardItem translateZ="80" className="absolute top-5 left-5 z-10">
+                      <CardItem
+                        translateZ="80"
+                        className="absolute top-5 left-5 z-10"
+                      >
                         <span className="text-[8px] font-body font-black uppercase tracking-widest px-3 py-1.5 rounded-full bg-black/40 backdrop-blur-sm text-ponira-yellow border border-ponira-yellow/20">
                           {labMeta[c.lab].label}
                         </span>
@@ -254,7 +259,10 @@ export default function CaseClient({ params }: Props) {
                   </CardItem>
 
                   {/* Info do próximo */}
-                  <CardItem translateZ="30" className="flex items-end justify-between gap-6">
+                  <CardItem
+                    translateZ="30"
+                    className="flex items-end justify-between gap-6"
+                  >
                     <div>
                       <span className="text-ponira-yellow font-body text-[10px] uppercase tracking-[0.3em] font-bold opacity-60 block mb-3">
                         {next.category}

@@ -114,7 +114,6 @@ export default function CasesClient() {
                   <CardContainer containerClassName="w-full" className="w-full">
                     <CardBody className="w-full">
                       <Link href={`/cases/${c.slug}`} className="block">
-
                         {/* Cover */}
                         <CardItem translateZ="50" className="w-full">
                           <div className="aspect-video mb-6 overflow-hidden rounded-tr-[80px] rounded-bl-[80px] border border-ponira-white/5 relative bg-black/20">
@@ -126,7 +125,9 @@ export default function CasesClient() {
                               />
                             ) : (
                               <div className="absolute inset-0 bg-gradient-to-tr from-ponira-brown/60 to-transparent flex items-center justify-center">
-                                <span className="text-ponira-yellow/20 font-display text-6xl italic">✦</span>
+                                <span className="text-ponira-yellow/20 font-display text-6xl italic">
+                                  ✦
+                                </span>
                               </div>
                             )}
 
@@ -137,7 +138,10 @@ export default function CasesClient() {
                             </div>
 
                             {/* Lab badge */}
-                            <CardItem translateZ="80" className="absolute top-4 left-4 z-10">
+                            <CardItem
+                              translateZ="80"
+                              className="absolute top-4 left-4 z-10"
+                            >
                               <span className="text-[8px] font-body font-black uppercase tracking-widest px-2 py-1 rounded-full bg-black/40 backdrop-blur-sm text-ponira-yellow border border-ponira-yellow/20">
                                 {labMeta[c.lab].label}
                               </span>
@@ -146,7 +150,10 @@ export default function CasesClient() {
                         </CardItem>
 
                         {/* Info */}
-                        <CardItem translateZ="30" className="flex flex-col gap-1">
+                        <CardItem
+                          translateZ="30"
+                          className="flex flex-col gap-1"
+                        >
                           <span className="text-ponira-yellow font-body text-[10px] uppercase tracking-[0.2em] font-black block mb-2">
                             {c.category} · {c.year}
                           </span>
@@ -157,7 +164,6 @@ export default function CasesClient() {
                             {c.subtitle}
                           </p>
                         </CardItem>
-
                       </Link>
                     </CardBody>
                   </CardContainer>

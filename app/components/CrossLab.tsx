@@ -119,9 +119,11 @@ export default function CrossLab() {
                 style={{ padding: "32px 56px 56px 32px" }}
               >
                 <div className="relative z-10 flex flex-col h-full">
-
                   {/* Labs */}
-                  <CardItem translateZ="40" className="flex gap-2 mb-6 flex-wrap">
+                  <CardItem
+                    translateZ="40"
+                    className="flex gap-2 mb-6 flex-wrap"
+                  >
                     {pkg.labs.map((lab, j) => (
                       <span
                         key={lab}
@@ -150,7 +152,9 @@ export default function CrossLab() {
                     <ul className="space-y-3">
                       {pkg.includes.map((item) => (
                         <li key={item} className="flex items-start gap-3">
-                          <span className="text-ponira-yellow mt-0.5 text-xs">✦</span>
+                          <span className="text-ponira-yellow mt-0.5 text-xs">
+                            ✦
+                          </span>
                           <span className="text-ponira-white/60 font-body font-light text-sm leading-relaxed">
                             {item}
                           </span>
@@ -160,7 +164,10 @@ export default function CrossLab() {
                   </CardItem>
 
                   {/* Preço + CTA */}
-                  <CardItem translateZ="60" className="border-t border-ponira-white/5 pt-6 flex flex-col gap-4">
+                  <CardItem
+                    translateZ="60"
+                    className="border-t border-ponira-white/5 pt-6 flex flex-col gap-4"
+                  >
                     <div>
                       <span className="text-ponira-white/20 font-body text-[9px] uppercase tracking-widest block mb-1">
                         A partir de
@@ -180,7 +187,6 @@ export default function CrossLab() {
                       Solicitar orçamento
                     </Link>
                   </CardItem>
-
                 </div>
               </CardBody>
             </CardContainer>

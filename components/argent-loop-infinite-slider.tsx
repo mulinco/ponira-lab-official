@@ -74,8 +74,8 @@ const getProjectData = (index: number) => {
 
 const getProjectNumber = (index: number) => {
   return (
-    ((Math.abs(index) % PROJECT_DATA.length) + PROJECT_DATA.length) %
-      PROJECT_DATA.length +
+    (((Math.abs(index) % PROJECT_DATA.length) + PROJECT_DATA.length) %
+      PROJECT_DATA.length) +
     1
   )
     .toString()
@@ -111,7 +111,7 @@ export function Component() {
     img: HTMLImageElement | null,
     scroll: number,
     index: number,
-    height: number
+    height: number,
   ) => {
     if (!img) return;
     if (!img.dataset.parallaxCurrent) {
@@ -130,7 +130,7 @@ export function Component() {
     const s = state.current;
     const progress = Math.min(
       (getNow() - s.snapStart.time) / CONFIG.SNAP_DURATION,
-      1
+      1,
     );
     const eased = 1 - Math.pow(1 - progress, 3);
     s.targetY = s.snapStart.y + (s.snapStart.target - s.snapStart.y) * eased;
@@ -228,7 +228,7 @@ export function Component() {
       s.lastScrollTime = getNow();
       const delta = Math.max(
         Math.min(e.deltaY * CONFIG.SCROLL_SPEED, CONFIG.MAX_VELOCITY),
-        -CONFIG.MAX_VELOCITY
+        -CONFIG.MAX_VELOCITY,
       );
       s.targetY -= delta;
     };
@@ -256,7 +256,7 @@ export function Component() {
     const onResize = () => {
       state.current.projectHeight = window.innerHeight;
       const container = document.querySelector(
-        ".parallax-container"
+        ".parallax-container",
       ) as HTMLElement;
       if (container) {
         container.style.height = `${window.innerHeight}px`;
