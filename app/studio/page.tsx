@@ -388,12 +388,12 @@ export default function StudioPage() {
               </h2>
               <p className="text-ponira-white/40 font-body font-light text-base leading-relaxed">
                 Precisa de mais de uma frente?{" "}
-                <Link
-                  href="/#pacotes"
-                  className="text-amber-400/70 hover:text-amber-400 transition-colors"
+                <a
+                  href="https://poniralab.com/#pacotes"
+                  className="text-rose-400/70 hover:text-rose-400 transition-colors"
                 >
                   Conheça nossos pacotes cross-lab →
-                </Link>
+                </a>
               </p>
             </div>
             <a
