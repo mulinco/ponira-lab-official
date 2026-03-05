@@ -20,6 +20,11 @@ export default function Home() {
       <div className="relative z-10">
         <Navbar />
         <Hero />
+        <div id="labs">
+          <SectionReveal>
+            <Labs />
+          </SectionReveal>
+        </div>
       </div>
     </main>
   );
