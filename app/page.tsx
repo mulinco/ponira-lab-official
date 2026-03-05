@@ -35,6 +35,11 @@ export default function Home() {
             <CrossLab />
           </SectionReveal>
         </div>
+        <div id="founders">
+          <SectionReveal exitAt={0.88}>
+            <Founders />
+          </SectionReveal>
+        </div>
       </div>
     </main>
   );
