@@ -16,6 +16,11 @@ export interface CaseStudy {
   externalUrl: string | null;
   externalLabel: string | null;
   featured: boolean;
+  compare?: {
+    before: string;
+    after: string;
+    label?: string;
+  };
 }
 
 export const cases: CaseStudy[] = [
@@ -394,7 +399,7 @@ export const cases: CaseStudy[] = [
     subtitle: "Pesquisa científica com presença digital.",
     category: "Plataforma Científica",
     year: "2024",
-    cover: "/covers/lbem-ufrj.png",
+    cover: "/cases/lbem/depois.jpg",
     images: ["/covers/lbem-ufrj.png"],
     context:
       "O Laboratório de Bioinformática Evolutiva e Molecular da UFRJ realiza pesquisa de alto nível mas tinha presença digital aquém da qualidade científica produzida. A plataforma precisava comunicar rigor, credibilidade e acessibilidade — para outros pesquisadores e para o público interessado.",
@@ -406,6 +411,11 @@ export const cases: CaseStudy[] = [
     externalUrl: "https://lbem-vercel.app",
     externalLabel: "Ver Projeto",
     featured: false,
+    compare: {
+      before: "/cases/lbem/antes.jpg",
+      after: "/cases/lbem/depois.jpg",
+      label: "Antes · Depois",
+    },
   },
   {
     slug: "landing-page-cjp",

@@ -9,6 +9,7 @@ import Footer from "@/app/components/Footer";
 import Grainient from "../Grainient";
 import SectionReveal from "./components/Sectionreveal";
 import ViewportBlur from "./components/ViewportBlur";
+import Testimonials from "@/app/components/Testimonials";
 
 export default function Home() {
   return (

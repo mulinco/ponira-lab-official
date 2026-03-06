@@ -10,6 +10,7 @@ import Footer from "@/app/components/Footer";
 import ViewportBlur from "@/app/components/ViewportBlur";
 import CaseGallery from "@/app/components/CaseGallery";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
+import { Compare } from "@/components/ui/compare";
 import { getCaseBySlug, cases, labMeta } from "@/lib/cases";
 
 interface Props {
@@ -81,10 +82,7 @@ export default function CaseClient({ params }: Props) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
             >
-              {/* Cover hero com padrão 3d-card */}
-              <CardContainer containerClassName="w-full" className="w-full">
-                <CardBody className="w-full">
-                  <CardItem translateZ="40" className="w-full">
+              
                     <div className="aspect-video overflow-hidden rounded-tr-[80px] rounded-bl-[80px] border border-ponira-white/5 relative bg-black/20">
                       <img
                         src={c.cover}
@@ -94,7 +92,6 @@ export default function CaseClient({ params }: Props) {
                           objectPosition: centerCrop ? "center" : "top center",
                         }}
                       />
-                      {/* Lab badge flutuante */}
                       <CardItem
                         translateZ="80"
                         className="absolute top-5 left-5 z-10"
@@ -104,9 +101,7 @@ export default function CaseClient({ params }: Props) {
                         </span>
                       </CardItem>
                     </div>
-                  </CardItem>
-                </CardBody>
-              </CardContainer>
+        
             </motion.div>
           )}
         </section>
@@ -156,6 +151,7 @@ export default function CaseClient({ params }: Props) {
             </aside>
 
             <div className="md:col-span-9 space-y-20">
+
               {/* 01 Contexto */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -224,6 +220,30 @@ export default function CaseClient({ params }: Props) {
                   centerCrop={centerCrop}
                 />
               )}
+
+              {/* 04 Antes · Depois — só aparece se o case tiver c.compare */}
+              {c.compare && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7 }}
+                  viewport={{ once: true }}
+                >
+                  <span className="text-ponira-yellow font-body text-[9px] uppercase tracking-[0.4em] font-bold opacity-60 block mb-6">
+                    {c.compare.label ?? "Antes · Depois"}
+                  </span>
+                  <div className="rounded-tr-[80px] rounded-bl-[80px] overflow-hidden border border-ponira-white/5">
+                    <Compare
+                      firstImage={c.compare.before}
+                      secondImage={c.compare.after}
+                      slideMode="drag"
+                      showHandlebar={true}
+                      className="w-full aspect-video"
+                    />
+                  </div>
+                </motion.div>
+              )}
+
             </div>
           </div>
         </section>
@@ -235,11 +255,9 @@ export default function CaseClient({ params }: Props) {
               Próximo Case
             </span>
 
-            <CardContainer containerClassName="w-full" className="w-full">
-              <CardBody className="w-full">
+            
                 <Link href={`/cases/${next.slug}`} className="group block">
-                  {/* Cover mini do próximo */}
-                  <CardItem translateZ="40" className="w-full mb-8">
+            
                     <div className="aspect-video overflow-hidden rounded-tr-[80px] rounded-bl-[80px] border border-ponira-white/5 relative bg-black/20">
                       {next.cover ? (
                         <img
@@ -256,13 +274,9 @@ export default function CaseClient({ params }: Props) {
                         </span>
                       </div>
                     </div>
-                  </CardItem>
+                  </Link>
 
-                  {/* Info do próximo */}
-                  <CardItem
-                    translateZ="30"
-                    className="flex items-end justify-between gap-6"
-                  >
+                  
                     <div>
                       <span className="text-ponira-yellow font-body text-[10px] uppercase tracking-[0.3em] font-bold opacity-60 block mb-3">
                         {next.category}
@@ -274,10 +288,7 @@ export default function CaseClient({ params }: Props) {
                     <span className="text-ponira-yellow text-4xl group-hover:translate-x-2 transition-transform duration-300 shrink-0 mb-2">
                       →
                     </span>
-                  </CardItem>
-                </Link>
-              </CardBody>
-            </CardContainer>
+                  
           </div>
         </section>
 
